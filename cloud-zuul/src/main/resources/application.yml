@@ -1,0 +1,99 @@
+#端口和初始路径配置
+server:
+  port: 8113
+
+#项目名称
+spring:
+  application:
+    name: zuul
+  #数据源配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_cloud_demo?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456789
+    driver-class-name: com.mysql.jdbc.Driver
+  #redis
+  #redis:
+    #host: redis-host
+    #port: 6379
+  #mongodb
+  #data:
+    #mongodb:
+      #database: k12-mall
+      #grid-fs-database: k12-mall
+      #uri: mongodb://db-host:27017/k12-mall
+
+#日志配置
+$log:
+  level:
+  default: debug
+
+#zuul配置
+#单实例配置,如果一个请求http://localhost:6069/user-service/hello就被请求转发到http://localhost:8080/hello地址
+#zuul.routes.user-service.path=/user-service/**
+#zuul.routes.user-service.url=http://localhost:8080/
+#ribbon:
+  #eureka:
+    #enabled: false #配置zuul路由时用将此属性设置为false
+ribbon:
+#建立连接所用的时间，适用于网络状况正常的情况下，两端连接所用的时间。
+  ReadTimeout: 1200000
+#建立连接后从服务器读取到可用资源所用的时间。
+  ConnectTimeout: 1200000
+  MaxTotalHttpConnections: 1000
+  MaxHttpConnectionsPerHost: 1000
+
+hystrix:
+    command:
+        default:
+            execution:
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 600000 #毫秒单位
+
+#多实例配置
+#user-service.ribbon.listOfServers=http://localhost:8080/,http://localhost:8081/
+#cloud-client:
+#  ribbon:
+#    listOfServers: 127.0.0.1:8800 #为cloud-client服务指定一组服务地址，应该是用于负载均衡
+
+#logging:
+#  path: /logs
+#  file: springbootdemo.log
+#  level:
+#    root: debug
+#  pattern:
+#    console: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
+#    file: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
+
+
+#eureka配置
+eureka:
+    client:
+      service-url:
+          defaultZone: http://eureka-host:1111/eureka/
+#zuul配置
+zuul:
+  routes:
+    cloud-basic:
+        path: /basic/**
+        serviceId: BASIC
+        sensitiveHeaders:
+  host:
+    connect-timeout-millis: 100000
+    socket-timeout-millis: 600000
+#feign-hystrix配置
+feign:
+  hystrix:
+    enabled: true
+#    使用'*'可忽略所有微服务
+#  ignored-services: '*'
+
+#zuul:
+#  routes:
+#    sina:
+#      path: /sina/**
+#      url: http://www.sina.com.cn
+#    baidu:
+#      path: /baidu/**
+#      url: http://www.baidu.com

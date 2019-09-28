@@ -1,0 +1,48 @@
+#端口和初始路径配置
+server:
+  port: 8111
+  servlet:
+    context-path: /basic
+
+#项目名称
+spring:
+  application:
+    name: basic
+  #数据源配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_cloud_demo?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456789
+    driver-class-name: com.mysql.jdbc.Driver
+  main:
+    allow-bean-definition-overriding: true
+  #redis
+  #redis:
+    #host: redis-host
+    #port: 6379
+  #mongodb
+  #data:
+    #mongodb:
+      #database: k12-mall
+      #grid-fs-database: k12-mall
+      #uri: mongodb://db-host:27017/k12-mall
+
+#日志配置
+$log:
+  level:
+  default: debug
+
+#eureka配置
+eureka:
+    client:
+      service-url:
+          defaultZone: http://eureka-host:1111/eureka/
+
+#logging:
+#  path: /logs@Configuration
+#  file: springbootdemo.log
+#  level:
+#    root: debug
+#  pattern:
+#    console: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
+#    file: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"

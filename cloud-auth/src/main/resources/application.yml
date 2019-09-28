@@ -1,0 +1,45 @@
+#端口和初始路径配置
+server:
+  port: 8112
+  servlet:
+    context-path: /auth
+
+#项目名称
+spring:
+  application:
+    name: auth
+  #数据源配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_cloud_demo?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456789
+    driver-class-name: com.mysql.jdbc.Driver
+  #redis
+  #redis:
+    #host: redis-host
+    #port: 6379
+  #mongodb
+  #data:
+    #mongodb:
+      #database: k12-mall
+      #grid-fs-database: k12-mall
+      #uri: mongodb://db-host:27017/k12-mall
+
+#日志配置
+$log:
+  level:
+  default: debug
+
+#eureka配置
+eureka:
+    client:
+      service-url:
+          defaultZone: http://eureka-host:1111/eureka/
+#logging:
+#  path: /logs
+#  file: springbootdemo.log
+#  level:
+#    root: debug
+#  pattern:
+#    console: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
+#    file: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
