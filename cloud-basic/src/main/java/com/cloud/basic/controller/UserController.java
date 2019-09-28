@@ -2,7 +2,6 @@ package com.cloud.basic.controller;
 
 import com.cloud.basic.dao.SUserRepo;
 import com.cloud.basic.entity.SUserEntity;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -10,7 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.*;
+import java.util.List;
+import java.util.Objects;
 
 @Api(tags = "用户接口controller")
 @Slf4j
