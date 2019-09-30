@@ -29,4 +29,3 @@ build/
 
 ### VS Code ###
 .vscode/
-/src/main/java/com/cloud/basic/controller/UserController.java
