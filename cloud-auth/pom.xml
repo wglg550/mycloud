@@ -10,5 +10,65 @@
 	<groupId>com.cloud.auth</groupId>
 	<artifactId>cloud-auth</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.cloud.auth.CloudAuthApplication</mainClass>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>./</classpathPrefix>
+						</manifest>
+						<manifestEntries>
+							<Class-Path>../config/</Class-Path>
+						</manifestEntries>
+					</archive>
+					<excludes>
+						<exclude>*.properties</exclude>
+						<exclude>*.xml </exclude>
+						<exclude>*.conf </exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<finalName>cloud-auth</finalName>
+					<descriptors>
+						<descriptor>assembly.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>install</phase>
+						<goals>
+							<goal>assembly</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<executable>true</executable>
+					<includeSystemScope>true</includeSystemScope>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

@@ -247,7 +247,7 @@
             </plugin>
         </plugins>
 
-        <!--<resources>
+        <resources>
             <resource>
                 <directory>src/main/java</directory>
                 <includes>
@@ -266,6 +266,6 @@
                 </includes>
                 <filtering>false</filtering>
             </resource>
-        </resources>-->
+        </resources>
     </build>
 </project>
