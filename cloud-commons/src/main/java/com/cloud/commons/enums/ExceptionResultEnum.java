@@ -1,29 +1,28 @@
 package com.cloud.commons.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum ExceptionResultEnum {
-    UNKONW_ERROR(-1, "未知错误"),
+    UNKONW_ERROR("-1", "未知错误"),
 
-    SUCCESS(0, "成功"),
+    SUCCESS("0", "成功"),
 
-    ERROR(1, "失败"),
+    ERROR("1", "失败"),
 
-    USERNAME_ILLEGALITY(100, "用户名非法"),
+    SQL_ERROR("502", "sql异常"),
 
-    PASSWORD_ILLEGALITY(101, "密码非法");
+    USERNAME_ILLEGALITY("100", "用户名非法"),
 
-    private Integer code;
+    PARAMS_ILLEGALITY("102", "参数不能为空"),
+
+    PASSWORD_ILLEGALITY("101", "密码非法");
+
+    private String code;
     private String msg;
 
-    ExceptionResultEnum(Integer code, String msg) {
+    ExceptionResultEnum(String code, String msg) {
         this.code = code;
         this.msg = msg;
-    }
-
-    public Integer getCode() {
-        return code;
-    }
-
-    public String getMsg() {
-        return msg;
     }
 }

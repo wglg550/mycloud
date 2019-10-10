@@ -2,6 +2,8 @@ package com.cloud.basic.controller;
 
 import com.cloud.basic.dao.SUserRepo;
 import com.cloud.basic.entity.SUserEntity;
+import com.cloud.commons.Exception.BusinessException;
+import com.cloud.commons.enums.ExceptionResultEnum;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -43,11 +45,11 @@ public class UserController {
 //    hystrix使用
 //    @HystrixCommand(fallbackMethod = "registerFallback")
     public Boolean register(@ApiParam(value = "用户注册信息：国家|姓名|密码|年龄|性别|地址|QQ号|微信号|手机号码|邮箱", required = true) @RequestBody SUserEntity userEntity) throws Exception {
-        if (Objects.isNull(userEntity)) {
-            throw new Exception("userEntity不能为空");
-        }
-        userEntity = userRepo.save(userEntity);
-        return userEntity.getId() != null ? true : false;
+//        if (Objects.isNull(userEntity)) {
+            throw new BusinessException(ExceptionResultEnum.PARAMS_ILLEGALITY);
+//        }
+//        userEntity = userRepo.save(userEntity);
+//        return userEntity.getId() != null ? true : false;
     }
 
     @ApiOperation(value = "用户查重接口")
