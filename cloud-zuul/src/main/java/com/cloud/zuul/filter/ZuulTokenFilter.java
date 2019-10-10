@@ -5,6 +5,7 @@ import com.netflix.zuul.context.RequestContext;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Objects;
 
 /**
@@ -16,6 +17,10 @@ import java.util.Objects;
  */
 @Slf4j
 public class ZuulTokenFilter extends ZuulFilter {
+
+    //排除过滤的 uri 地址
+    private static final String LOGIN_URI = "/basic/basic/user/login";
+    private static final String REGISTER_URI = "/basic/basic/user/register";
 
     @Override
     public String filterType() {
@@ -29,6 +34,19 @@ public class ZuulTokenFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
+        RequestContext requestContext = RequestContext.getCurrentContext();
+        HttpServletRequest request = requestContext.getRequest();
+//        HttpServletResponse response = requestContext.getResponse();
+        String requestURI = request.getRequestURI();
+        //登录和注册放行
+        if (LOGIN_URI.equals(requestURI) || REGISTER_URI.equals(requestURI)) {
+//            String uuidToken = UUID.randomUUID().toString();
+//            redisUtils.set(uuidToken, uuidToken);
+//            response.setHeader("Access-Control-Expose-Headers",
+//                    "Cache-Control,Content-Type,Expires,Pragma,Content-Language,Last-Modified,token");
+//            response.setHeader("token", uuidToken); // 设置响应头
+            return false;
+        }
         return true;// 是否执行该过滤器，此处为true，说明需要过滤
     }
 

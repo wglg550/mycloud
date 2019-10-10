@@ -1,13 +1,12 @@
 package com.cloud.basic.entity;
 
+import com.cloud.basic.enums.SexEnum;
+import com.sun.istack.internal.NotNull;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "s_user", schema = "spring_cloud_demo", catalog = "")
@@ -15,26 +14,33 @@ import javax.persistence.Table;
 @Setter
 public class SUserEntity {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ApiModelProperty(value = "国家")
     private String national;
+    @NotNull
     @ApiModelProperty(value = "姓名")
     private String name;
+    @NotNull
     @ApiModelProperty(value = "密码")
     private String passwrod;
+    @NotNull
     @ApiModelProperty(value = "年龄", example = "18")
     private Long age;
+    @NotNull
+//    @Enumerated(value = EnumType.ORDINAL)//可以通过注解，也可以不通过注解
     @ApiModelProperty(value = "性别")
-    private Boolean sex;
+    private Boolean sex;//0：男，1：女
     @ApiModelProperty(value = "地址")
     private String address;
     @ApiModelProperty(value = "QQ号", example = "100000")
     private Long qq;
     @ApiModelProperty(value = "微信号")
     private String wechat;
+    @NotNull
     @ApiModelProperty(value = "手机号码")
     private String phone;
+    @NotNull
     @ApiModelProperty(value = "邮箱")
     private String email;
 }

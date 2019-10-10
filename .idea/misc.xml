@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/cloud-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-auth/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-commons/pom.xml" />
       </list>
     </option>
   </component>

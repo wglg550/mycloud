@@ -12,6 +12,14 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.cloud.commons</groupId>
+            <artifactId>cloud-commons</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
     <build>
     <plugins>
         <plugin>
