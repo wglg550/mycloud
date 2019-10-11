@@ -1,5 +1,12 @@
 package com.cloud.basic.enums;
 
+/**
+ * @Description: 性别枚举
+ * @Param:
+ * @return:
+ * @Author: wangliang
+ * @Date: 2019/10/11
+ */
 public enum SexEnum {
     /**
      * 男

@@ -7,33 +7,68 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import javax.servlet.http.HttpServletRequest;
+import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
 
+/**
+ * @Description: 全局异常处理
+ * @Param:
+ * @return:
+ * @Author: wangliang
+ * @Date: 2019/10/11
+ */
 @ControllerAdvice
 @Slf4j
-@EnableWebMvc
 public class GlobalDefultExceptionHandler {
 
-    //声明要捕获的异常
+    /**
+     * excetion异常处理
+     *
+     * @param request
+     * @param e
+     * @param <T>
+     * @return
+     */
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public <T> Result defultExcepitonHandler(HttpServletRequest request, Exception e) {
         e.printStackTrace();
+        log.error("Exception异常：{}", e, this.getClass());
         if (e instanceof BusinessException) {
-            log.error("业务异常：" + e.getMessage(), this.getClass());
             BusinessException businessException = (BusinessException) e;
             return ResultUtil.error(businessException.getCode(), businessException.getMessage());
         }
-        //未知错误
-        return ResultUtil.error(ExceptionResultEnum.UNKONW_ERROR.getCode(), ExceptionResultEnum.UNKONW_ERROR.name() + ":" + e);
+        //Exception错误
+        return ResultUtil.error(ExceptionResultEnum.EXCEPTION_ERROR.getCode(), ExceptionResultEnum.EXCEPTION_ERROR.getMsg() + e);
     }
 
+    /**
+     * sql异常处理
+     *
+     * @param e
+     * @param <T>
+     * @return
+     */
     @ExceptionHandler(SQLException.class)
     @ResponseBody
-    public <T> Result sqlExceptionHandler(SQLException ex) {
-        return ResultUtil.error(ExceptionResultEnum.SQL_ERROR.getCode(), ExceptionResultEnum.SQL_ERROR.name() + ":" + ex);
+    public <T> Result sqlExceptionHandler(SQLException e) {
+        log.error("sqlException异常：{}", e, this.getClass());
+        return ResultUtil.error(ExceptionResultEnum.SQL_ERROR.getCode(), ExceptionResultEnum.SQL_ERROR.name() + e);
+    }
+
+    /**
+     * 反射异常处理
+     *
+     * @param e
+     * @param <T>
+     * @return
+     */
+    @ExceptionHandler(InvocationTargetException.class)
+    @ResponseBody
+    public <T> Result invocationTargetExceptionHandler(InvocationTargetException e) {
+        log.error("invocationTarget异常：{}", e.getTargetException(), this.getClass());
+        return ResultUtil.error(ExceptionResultEnum.INVOCATIONTARGET_ERROR.getCode(), ExceptionResultEnum.INVOCATIONTARGET_ERROR.name() + e.getTargetException());
     }
 }

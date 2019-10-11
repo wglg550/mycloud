@@ -7,6 +7,13 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.io.Serializable;
 
+/**
+ * @Description: 自定义异常处理
+ * @Param:
+ * @return:
+ * @Author: wangliang
+ * @Date: 2019/10/11
+ */
 @Getter
 @Setter
 @Slf4j
@@ -24,7 +31,7 @@ public class BusinessException extends RuntimeException implements Serializable 
     }
 
     public BusinessException(String code, String msg) {
-        log.error("[code: " + code + "; msg: " + msg + "]");
+        super(msg);
         this.code = code;
         this.msg = msg;
     }

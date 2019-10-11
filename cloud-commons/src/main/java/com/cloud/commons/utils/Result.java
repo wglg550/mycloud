@@ -5,6 +5,13 @@ import lombok.Setter;
 
 import java.io.Serializable;
 
+/** 
+* @Description: 自定义异常处理消息 
+* @Param:  
+* @return:  
+* @Author: wangliang
+* @Date: 2019/10/11 
+*/ 
 @Getter
 @Setter
 public class Result implements Serializable {

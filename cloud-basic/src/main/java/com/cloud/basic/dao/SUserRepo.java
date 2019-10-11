@@ -5,6 +5,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
+/**
+ * @Description: s_user repo
+ * @Param:
+ * @return:
+ * @Author: wangliang
+ * @Date: 2019/10/11
+ */
 @Repository
 public interface SUserRepo extends JpaRepository<SUserEntity, Long>, JpaSpecificationExecutor<SUserEntity> {
 

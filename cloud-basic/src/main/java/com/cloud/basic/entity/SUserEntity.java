@@ -1,17 +1,27 @@
 package com.cloud.basic.entity;
 
-import com.cloud.basic.enums.SexEnum;
 import com.sun.istack.internal.NotNull;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 
+/**
+ * @Description: s_user entity
+ * @Param:
+ * @return:
+ * @Author: wangliang
+ * @Date: 2019/10/11
+ */
 @Entity
 @Table(name = "s_user", schema = "spring_cloud_demo", catalog = "")
 @Getter
 @Setter
+@DynamicInsert
+@DynamicUpdate
 public class SUserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +38,7 @@ public class SUserEntity {
     @ApiModelProperty(value = "年龄", example = "18")
     private Long age;
     @NotNull
-//    @Enumerated(value = EnumType.ORDINAL)//可以通过注解，也可以不通过注解
+//    @Enumerated(value = EnumType.ORDINAL)//可以通过注解枚举的形式，也可以不通过注解
     @ApiModelProperty(value = "性别")
     private Boolean sex;//0：男，1：女
     @ApiModelProperty(value = "地址")
