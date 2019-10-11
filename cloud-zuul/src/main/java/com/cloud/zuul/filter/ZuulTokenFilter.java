@@ -5,7 +5,6 @@ import com.netflix.zuul.context.RequestContext;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.Objects;
 
 /**
@@ -54,7 +53,7 @@ public class ZuulTokenFilter extends ZuulFilter {
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
-        log.info("ZuulTokenFilter {},{}", request.getMethod(), request.getRequestURL().toString());
+        log.debug("ZuulTokenFilter {},{}", request.getMethod(), request.getRequestURL().toString());
         String token = request.getHeader("token");// 获取请求的参数
         if (Objects.nonNull(token)) {
             ctx.setSendZuulResponse(true); //对请求进行路由
