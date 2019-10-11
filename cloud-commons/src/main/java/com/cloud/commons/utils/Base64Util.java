@@ -25,8 +25,7 @@ public class Base64Util {
      * @throws UnsupportedEncodingException
      */
     public static String encoder(String text) throws UnsupportedEncodingException {
-        Optional<String> optional = Optional.of(text);
-        text = optional.get();
+        text = Optional.of(text).get();
         Base64.Encoder encoder = Base64.getEncoder();
         log.info("Base64加密前的文本：{}", text);
         byte[] textByte = text.getBytes(SystemConstant.ENCODING);
@@ -43,8 +42,7 @@ public class Base64Util {
      * @throws UnsupportedEncodingException
      */
     public static String decoder(String text) throws UnsupportedEncodingException {
-        Optional<String> optional = Optional.of(text);
-        text = optional.get();
+        text = Optional.of(text).get();
         Base64.Decoder decoder = Base64.getDecoder();
         String decoderText = new String(decoder.decode(text), SystemConstant.ENCODING);
         log.info("Base64解密后的文本：{}", decoderText);

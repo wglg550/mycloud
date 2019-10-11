@@ -196,6 +196,11 @@
             <artifactId>druid</artifactId>
             <version>1.1.16</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
     </dependencies>
 
     <!--编译管理 jdk版本和字符集编码-->
