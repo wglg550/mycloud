@@ -3,6 +3,7 @@ package com.cloud.basic.controller;
 import com.cloud.basic.dao.SUserRepo;
 import com.cloud.basic.entity.SUserEntity;
 import com.cloud.commons.Exception.BusinessException;
+import com.cloud.commons.utils.Base64Util;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -51,6 +52,8 @@ public class UserController {
 //    hystrix使用
 //    @HystrixCommand(fallbackMethod = "registerFallback")
     public Boolean register(@ApiParam(value = "用户注册信息：国家|姓名|密码|年龄|性别|地址|QQ号|微信号|手机号码|邮箱", required = true) @RequestBody SUserEntity userEntity) throws Exception {
+        String encodedText = Base64Util.encoder(String.valueOf(userEntity.getAge()));
+        Base64Util.decoder(encodedText);
         if (Objects.isNull(userEntity)) {
             throw new BusinessException("registerException", "userEntity不能为空");
         }

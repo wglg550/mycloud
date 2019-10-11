@@ -1,5 +1,6 @@
 package com.cloud.commons.utils;
 
+import com.cloud.commons.bean.Result;
 import com.cloud.commons.enums.ExceptionResultEnum;
 import lombok.extern.slf4j.Slf4j;
 

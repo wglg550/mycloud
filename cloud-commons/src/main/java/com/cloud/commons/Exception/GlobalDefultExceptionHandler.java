@@ -1,7 +1,7 @@
 package com.cloud.commons.Exception;
 
+import com.cloud.commons.bean.Result;
 import com.cloud.commons.enums.ExceptionResultEnum;
-import com.cloud.commons.utils.Result;
 import com.cloud.commons.utils.ResultUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
