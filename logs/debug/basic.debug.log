@@ -2471,3 +2471,4 @@ java.lang.ArithmeticException: / by zero
 2019-10-11 11:56:27.657| http-nio-8111-exec-2 | ERROR |  -  | error code:registerException | [com.cloud.commons.utils.ResultUtil:24]
 2019-10-11 11:57:08.467| http-nio-8111-exec-3 | ERROR |  -  | Exception异常：com.cloud.commons.Exception.BusinessException: userEntity不能为空 | [com.cloud.commons.Exception.GlobalDefultExceptionHandler:38]
 2019-10-11 11:57:10.400| http-nio-8111-exec-3 | ERROR |  -  | error code:registerException,msg:userEntity不能为空 | [com.cloud.commons.utils.ResultUtil:24]
+2019-10-11 12:00:24.040| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]

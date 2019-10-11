@@ -160,3 +160,5 @@
 2019-10-11 11:57:34.420| ReplicaAwareInstanceRegistry - RenewalThresholdUpdater | INFO |  -  | Current renewal threshold is : 5 | [com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl:539]
 2019-10-11 11:57:34.928| Eureka-EvictionTimer | INFO |  -  | Running the evict task with compensationTime 4ms | [com.netflix.eureka.registry.AbstractInstanceRegistry$EvictionTask:1250]
 2019-10-11 11:58:34.932| Eureka-EvictionTimer | INFO |  -  | Running the evict task with compensationTime 3ms | [com.netflix.eureka.registry.AbstractInstanceRegistry$EvictionTask:1250]
+2019-10-11 11:59:34.935| Eureka-EvictionTimer | INFO |  -  | Running the evict task with compensationTime 3ms | [com.netflix.eureka.registry.AbstractInstanceRegistry$EvictionTask:1250]
+2019-10-11 12:00:34.938| Eureka-EvictionTimer | INFO |  -  | Running the evict task with compensationTime 2ms | [com.netflix.eureka.registry.AbstractInstanceRegistry$EvictionTask:1250]
