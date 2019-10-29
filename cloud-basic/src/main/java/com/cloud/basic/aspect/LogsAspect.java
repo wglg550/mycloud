@@ -1,14 +1,12 @@
 package com.cloud.basic.aspect;
 
-import com.alibaba.druid.support.json.JSONUtils;
+import com.alibaba.fastjson.JSONObject;
 import com.cloud.commons.Exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -56,7 +54,7 @@ public class LogsAspect {
         if (Objects.isNull(argNames)) {
             throw new BusinessException("afterReturnUserPointException", "argNames不能为空");
         }
-        log.debug("args:{},argNames:{}", JSONUtils.toJSONString(Arrays.asList(args)), JSONUtils.toJSONString(Arrays.asList(argNames)));
+        log.debug("args:{},argNames:{}", JSONObject.toJSONString(Arrays.asList(args)), JSONObject.toJSONString(Arrays.asList(argNames)));
     }
 
 //    /**
