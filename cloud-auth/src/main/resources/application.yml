@@ -28,7 +28,7 @@ spring:
 #日志配置
 $log:
   level:
-  default: debug
+  default: info
 
 #eureka配置
 eureka:

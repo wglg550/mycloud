@@ -6,6 +6,12 @@ spring:
   application:
     name: eureka-service
 
+#日志配置
+$log:
+  level:
+  default: info
+
+
 #eureka配置
 eureka:
   instance:

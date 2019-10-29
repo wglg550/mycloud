@@ -3,6 +3,7 @@ package com.cloud.basic.controller;
 import com.cloud.basic.dao.SUserRepo;
 import com.cloud.basic.entity.SUserEntity;
 import com.cloud.commons.Exception.BusinessException;
+import com.cloud.commons.annotation.LogMethod;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -34,6 +35,7 @@ public class UserController {
 
     @ApiOperation(value = "用户登录接口")
     @GetMapping("/login")
+    @LogMethod
     public Boolean login(@ApiParam(value = "手机号码", required = true) @RequestParam String phone, @ApiParam(value = "密码", required = true) @RequestParam String password) {
         log.debug("login");
 //        feignBasicService.login(phone, password);

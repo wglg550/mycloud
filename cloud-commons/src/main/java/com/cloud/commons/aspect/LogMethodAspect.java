@@ -34,6 +34,7 @@ public class LogMethodAspect {
     private final String TOKEN = "token",
             MARK_USER = "markUser",//登录用户
             PARAM_ARGS = "args";//方法参数
+    private Map<String, Object> map;
     //            PARAM_ARG_NAMES = "argNames"//方法参数名
 
     //Controller层切点
@@ -54,12 +55,12 @@ public class LogMethodAspect {
         long start = System.currentTimeMillis();
         String className = joinPoint.getSignature().getDeclaringTypeName();
         String methodName = joinPoint.getSignature().getName();
-        log.debug("path method log:{} 开始执行方法", className + "." + methodName);
+        log.info("path method log:{} 开始执行方法", className + "." + methodName);
         Object o = joinPoint.proceed();
         // 获取执行的方法名
         long end = System.currentTimeMillis();
         // 打印耗时的信息
-        log.debug("path method log 执行方法:{},耗时{}", methodName, (end - start) / 1000 + "s");
+        log.info("path method log 执行方法:{},耗时{}", methodName, (end - start) / 1000 + "s");
         return o;
     }
 
@@ -79,7 +80,7 @@ public class LogMethodAspect {
     public Map getAspectCommon(JoinPoint joinPoint) throws Exception {
         String className = joinPoint.getSignature().getDeclaringTypeName();
         String methodName = joinPoint.getSignature().getName();
-        log.debug("{} aspect path:{}", this.getClass().getMethods()[0], className + "." + methodName);
+        log.info("{} aspect path:{}", this.getClass().getMethods()[0], className + "." + methodName);
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
         HttpSession session = request.getSession();
@@ -88,12 +89,13 @@ public class LogMethodAspect {
             throw new BusinessException("loginException", "请先登录");
         }
 //        MarkUser markUser = (MarkUser) session.getAttribute(MARK_USER);
-//        log.debug("markUser:{}", JSONObject.toJSONString(markUser));
+//        log.info("markUser:{}", JSONObject.toJSONString(markUser));
         Object[] args = joinPoint.getArgs(); // 参数值
+
 //        String[] argNames = ((MethodSignature) joinPoint.getSignature()).getParameterNames();//参数名
         JSONArray jsonArgsArray = JSONObject.parseArray(JSONObject.toJSONString(args));
 //        JSONArray jsonArgNamesArray = JSONObject.parseArray(JSONObject.toJSONString(argNames));
-        log.debug("jsonArgsArray:{},jsonArgNamesArray:{}", jsonArgsArray);
+        log.info("jsonArgsArray:{},jsonArgNamesArray:{}", jsonArgsArray);
 //        LOGGER.info("jsonArgNamesArray:{}", jsonArgNamesArray);
         Map<String, Object> map = new HashMap<>();
         map.put(PARAM_ARGS, jsonArgsArray);
