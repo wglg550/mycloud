@@ -37,7 +37,7 @@ public class LogMethodAspect {
     //            PARAM_ARG_NAMES = "argNames"//方法参数名
 
     //Controller层切点
-    @Pointcut("@annotation(com.cloud.commons.annotation.LogMethodAnnotation)")
+    @Pointcut("@annotation(com.cloud.commons.annotation.LogMethod)")
     public void logAspect() {
 
     }
