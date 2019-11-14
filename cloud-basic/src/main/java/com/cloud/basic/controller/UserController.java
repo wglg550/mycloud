@@ -4,6 +4,7 @@ import com.cloud.basic.dao.SUserRepo;
 import com.cloud.basic.entity.SUserEntity;
 import com.cloud.commons.Exception.BusinessException;
 import com.cloud.commons.annotation.LogMethod;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
