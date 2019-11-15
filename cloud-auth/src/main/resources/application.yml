@@ -2,7 +2,7 @@
 server:
   port: 8112
   servlet:
-    context-path: /auth
+    context-path: /oauth
 
 #项目名称
 spring:
@@ -43,3 +43,6 @@ eureka:
 #  pattern:
 #    console: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
 #    file: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
+
+#jwt生成密钥密码
+#test123
