@@ -33,7 +33,7 @@ public class SUserEntity {
     private String name;
     @NotNull
     @ApiModelProperty(value = "密码")
-    private String passwrod;
+    private String password;
     @NotNull
     @ApiModelProperty(value = "年龄", example = "18")
     private Long age;
