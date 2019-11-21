@@ -5,7 +5,7 @@ server:
 #项目名称
 spring:
   application:
-    name: zuul
+    name: cloud-zuul
   #数据源配置
   datasource:
     url: jdbc:mysql://localhost:3306/spring_cloud_demo?useUnicode=true&characterEncoding=UTF-8
@@ -77,7 +77,12 @@ zuul:
   routes:
     cloud-basic:
         path: /basic/**
-        serviceId: BASIC
+        serviceId: CLOUD-BASIC
+        sensitiveHeaders:
+    cloud-auth:
+
+        path: /auth/**
+        serviceId: CLOUD-AUTH
         sensitiveHeaders:
   host:
     connect-timeout-millis: 100000

@@ -21,10 +21,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 //@EnableCaching //开启缓存功能
 @EnableAutoConfiguration(exclude = {MultipartAutoConfiguration.class})//
 @EnableTransactionManagement //spring开启事务支持
+//@EnableFeignClients//fegin支持
 public class CloudAuthApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CloudAuthApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CloudAuthApplication.class, args);
+    }
 
 }

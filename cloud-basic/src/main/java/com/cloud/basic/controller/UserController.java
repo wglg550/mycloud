@@ -2,6 +2,7 @@ package com.cloud.basic.controller;
 
 import com.cloud.basic.dao.SUserRepo;
 import com.cloud.basic.entity.SUserEntity;
+import com.cloud.basic.provider.FeignBasicService;
 import com.cloud.commons.Exception.BusinessException;
 import com.cloud.commons.annotation.LogMethod;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -28,8 +29,8 @@ import java.util.Objects;
 @RequestMapping("/user")
 public class UserController {
 //    feign使用
-//    @Autowired
-//    FeignBasicService feignBasicService;
+    @Autowired
+    FeignBasicService feignBasicService;
 
     @Autowired
     SUserRepo userRepo;
@@ -39,7 +40,7 @@ public class UserController {
     @LogMethod
     public Boolean login(@ApiParam(value = "手机号码", required = true) @RequestParam String phone, @ApiParam(value = "密码", required = true) @RequestParam String password) {
         log.debug("login");
-//        feignBasicService.login(phone, password);
+        feignBasicService.login(phone, password);
         return null;
     }
 

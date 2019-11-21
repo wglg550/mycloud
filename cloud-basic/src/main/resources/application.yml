@@ -1,13 +1,13 @@
 #端口和初始路径配置
 server:
   port: 8111
-  servlet:
-    context-path: /basic
+#  servlet:
+#    context-path: /basic
 
 #项目名称
 spring:
   application:
-    name: basic
+    name: cloud-basic
   #数据源配置
   datasource:
 #      url: jdbc:mysql://localhost:3306/spring_cloud_demo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
