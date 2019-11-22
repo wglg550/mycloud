@@ -71,8 +71,8 @@ hystrix:
 eureka:
     client:
       service-url:
-#          defaultZone: http://root:root@eureka-host:1111/eureka/
-           defaultZone: http://eureka-host:1111/eureka/
+          defaultZone: http://root:root@eureka-host:1111/eureka/
+#           defaultZone: http://eureka-host:1111/eureka/
 #zuul配置
 zuul:
   routes:

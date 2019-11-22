@@ -2,7 +2,7 @@
 server:
   port: 8112
 #  servlet:
-#    context-path: /oauth
+#    context-path: /auth
 
 #项目名称
 spring:
@@ -34,8 +34,8 @@ $log:
 eureka:
     client:
       service-url:
-#          defaultZone: http://root:root@eureka-host:1111/eureka/
-           defaultZone: http://eureka-host:1111/eureka/
+          defaultZone: http://root:root@eureka-host:1111/eureka/
+#           defaultZone: http://eureka-host:1111/eureka/
 #logging:
 #  path: /logs
 #  file: springbootdemo.log
