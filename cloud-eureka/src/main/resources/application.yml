@@ -5,10 +5,10 @@ server:
 spring:
   application:
     name: eureka-service
-  security:
-    user:
-      name: root
-      password: root
+#  security:
+#    user:
+#      name: root
+#      password: root
 
 #日志配置
 $log:
@@ -26,4 +26,5 @@ eureka:
     #避免eureka查找服务列表
     fetch-registry: false
     serviceUrl:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka
+#      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka

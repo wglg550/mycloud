@@ -16,10 +16,19 @@ import org.springframework.stereotype.Repository;
 public interface SUserRepo extends JpaRepository<SUserEntity, Long>, JpaSpecificationExecutor<SUserEntity> {
 
     /**
-     * 根据name查找
+     * 根据手机号码和密码查询登录用户
      *
-     * @param name
+     * @param phone
+     * @param password
      * @return
      */
-    SUserEntity findByName(String name);
+    SUserEntity findByPhoneAndPassword(String phone, String password);
+
+    /**
+     * 根据手机号码查询登录用户
+     *
+     * @param phone
+     * @return
+     */
+    SUserEntity findByPhone(String phone);
 }

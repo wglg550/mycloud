@@ -2,10 +2,7 @@ package com.cloud.basic.controller;
 
 import com.cloud.basic.dao.SUserRepo;
 import com.cloud.basic.entity.SUserEntity;
-import com.cloud.basic.provider.FeignBasicService;
 import com.cloud.commons.Exception.BusinessException;
-import com.cloud.commons.annotation.LogMethod;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -28,20 +25,20 @@ import java.util.Objects;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-//    feign使用
-    @Autowired
-    FeignBasicService feignBasicService;
-
     @Autowired
     SUserRepo userRepo;
 
     @ApiOperation(value = "用户登录接口")
     @GetMapping("/login")
-    @LogMethod
-    public Boolean login(@ApiParam(value = "手机号码", required = true) @RequestParam String phone, @ApiParam(value = "密码", required = true) @RequestParam String password) {
-        log.debug("login");
-        feignBasicService.login(phone, password);
-        return null;
+//    @LogMethod
+    public SUserEntity login(@ApiParam(value = "手机号码", required = true) @RequestParam String phone, @ApiParam(value = "密码", required = true) @RequestParam String password) {
+        return userRepo.findByPhoneAndPassword(phone, password);
+    }
+
+    @ApiOperation(value = "根据手机号查找用户")
+    @GetMapping("/findByPhone")
+    public SUserEntity findByPhone(@ApiParam(value = "手机号码", required = true) @RequestParam String phone) {
+        return userRepo.findByPhone(phone);
     }
 
     @ApiOperation(value = "用户查询接口")
@@ -52,8 +49,6 @@ public class UserController {
 
     @ApiOperation(value = "用户注册接口")
     @PostMapping("/register")
-//    hystrix使用
-//    @HystrixCommand(fallbackMethod = "registerFallback")
     public Boolean register(@ApiParam(value = "用户注册信息：国家|姓名|密码|年龄|性别|地址|QQ号|微信号|手机号码|邮箱", required = true) @RequestBody SUserEntity userEntity) throws Exception {
 //        String encodedText = Base64Util.encoder(String.valueOf(userEntity.getAge()));
 //        Base64Util.decoder(encodedText);
@@ -75,9 +70,4 @@ public class UserController {
     public Integer selectRepeat(@ApiParam(value = "手机号码", required = true) @RequestParam String phone) {
         return null;
     }
-
-//    hystrix回调
-//    public Boolean registerFallback(SUserEntity userEntity) {
-//        return false;
-//    }
 }
