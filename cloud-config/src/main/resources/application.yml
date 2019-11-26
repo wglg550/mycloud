@@ -6,10 +6,12 @@ server:
 
 #eureka配置
 eureka:
-    client:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
       service-url:
-          defaultZone: http://root:root@eureka-host:1111/eureka/
-#           defaultZone: http://eureka-host:1111/eureka/
+           defaultZone: http://root:root@eureka-host:1111/eureka/
 
 #日志配置
 $log:
@@ -19,6 +21,10 @@ $log:
 spring:
   application:
     name: cloud-config
+  security:
+    user:
+      name: root
+      password: root
 # 从git获取配置文件
   cloud:
     config:
@@ -26,7 +32,10 @@ spring:
         git:
           uri: https://github.com/wglg550/mycloud #配置git仓库地址
           #指定搜索路径，config-server会自动搜索根目录和指定目录（逗号分隔）下的文件
-#          search-paths: learn-cloud-config/cloud-config-repo
-          search-paths: learn-cloud-config/cloud-config-core,learn-cloud-config/cloud-config-single/{application}
+          search-paths: cloud-config/cloud-config-core,cloud-config/cloud-config-module/{application}
+          profile: dev
+          label: dev
+  profiles:
+    active: dev
 #          username: username #访问git仓库的用户名
 #          password: password #访问git仓库的用户密码

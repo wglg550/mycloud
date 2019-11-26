@@ -1,11 +1,9 @@
 #端口和初始路径配置
-server:
-  port: 2111
+#server:
+#  port: 2111
 
 #项目名称
 spring:
-  application:
-    name: cloud-zuul
   #数据源配置
   datasource:
     url: jdbc:mysql://localhost:3306/spring_cloud_demo?useUnicode=true&characterEncoding=UTF-8
@@ -26,7 +24,7 @@ spring:
 #日志配置
 $log:
   level:
-  default: info
+  default: ${config.log.level}
 
 #zuul配置
 #单实例配置,如果一个请求http://localhost:6069/user-service/hello就被请求转发到http://localhost:8080/hello地址
@@ -68,10 +66,13 @@ hystrix:
 
 
 #eureka配置
-eureka:
-    client:
-      service-url:
-          defaultZone: http://root:root@eureka-host:1111/eureka/
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+#  client:
+#      service-url:
+#          defaultZone: http://root:root@eureka-host:1111/eureka/
 #           defaultZone: http://eureka-host:1111/eureka/
 #zuul配置
 zuul:
@@ -123,7 +124,7 @@ feign:
 #    enabled: false
 security:
   auth:
-    server: http://127.0.0.1:8112
+    server: http://${service.client.ipAddress}:8112
   oauth2:
     client:
       client-id: client_id
