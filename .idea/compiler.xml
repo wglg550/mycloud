@@ -10,6 +10,7 @@
         <module name="cloud-auth" />
         <module name="cloud-basic" />
         <module name="cloud-commons" />
+        <module name="cloud-config" />
         <module name="cloud-eureka" />
         <module name="cloud-zuul" />
       </profile>
@@ -18,6 +19,7 @@
       <module name="cloud-auth" target="1.8" />
       <module name="cloud-basic" target="1.8" />
       <module name="cloud-commons" target="1.8" />
+      <module name="cloud-config" target="1.8" />
       <module name="cloud-eureka" target="1.8" />
       <module name="cloud-parent" target="1.8" />
       <module name="cloud-zuul" target="1.8" />

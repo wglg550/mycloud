@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/cloud-auth/cloud-auth.iml" filepath="$PROJECT_DIR$/cloud-auth/cloud-auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-basic/cloud-basic.iml" filepath="$PROJECT_DIR$/cloud-basic/cloud-basic.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-commons/cloud-commons.iml" filepath="$PROJECT_DIR$/cloud-commons/cloud-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-config/cloud-config.iml" filepath="$PROJECT_DIR$/cloud-config/cloud-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-eureka/cloud-eureka.iml" filepath="$PROJECT_DIR$/cloud-eureka/cloud-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-parent/cloud-parent.iml" filepath="$PROJECT_DIR$/cloud-parent/cloud-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-zuul/cloud-zuul.iml" filepath="$PROJECT_DIR$/cloud-zuul/cloud-zuul.iml" />
