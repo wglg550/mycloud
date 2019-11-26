@@ -24,7 +24,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableAutoConfiguration(exclude = {MultipartAutoConfiguration.class})//
 @EnableTransactionManagement //spring开启事务支持
 @EnableFeignClients//fegin支持
-@EnableCircuitBreaker//hystrix服务降级
+//@EnableCircuitBreaker//hystrix服务降级
 public class CloudAuthApplication {
 
     public static void main(String[] args) {

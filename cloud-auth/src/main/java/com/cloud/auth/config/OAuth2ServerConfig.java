@@ -9,6 +9,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
@@ -19,12 +20,15 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.ClientDetailsService;
+import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
 
+import javax.sql.DataSource;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -51,6 +55,34 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
         public void configure(ResourceServerSecurityConfigurer resources) {
             resources.resourceId(DEMO_RESOURCE_ID).stateless(true);
         }
+
+        @Override
+        public void configure(HttpSecurity http) throws Exception {
+//            http.csrf().disable()
+//                    .exceptionHandling()
+//                    .authenticationEntryPoint((request, response, authException) -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED))
+//                    .and()
+//                    .authorizeRequests()
+//                    .anyRequest().authenticated()
+//                    .and()
+//                    .httpBasic();
+//            http
+//                    // Since we want the protected resources to be accessible in the UI as well we need
+//                    // session creation to be allowed (it's disabled by default in 2.0.6)
+//                    .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
+//                    .and()
+//                    .requestMatchers().anyRequest()
+//                    .and()
+//                    .anonymous()
+//                    .and()
+//                    .authorizeRequests()
+////                    .antMatchers("/product/**").access("#oauth2.hasScope('select') and hasRole('ROLE_USER')")
+//                    .antMatchers("/user/findByPhone").permitAll()
+//                    .anyRequest().authenticated();//配置order访问控制，必须认证过后才可以访问
+            http.authorizeRequests()
+                    .antMatchers("/oauth").permitAll()
+                    .anyRequest().authenticated();
+        }
     }
 
     @Configuration
@@ -64,15 +96,25 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
         @Autowired
         private RedisConnectionFactory redisConnectionFactory;
 
+        @Autowired
+        private DataSource dataSource;
+
         @Override
         public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-            //配置客户端
+//            //配置客户端
             clients.inMemory().withClient(CLIENT_ID)
                     .resourceIds(DEMO_RESOURCE_ID)
                     .authorizedGrantTypes("password", "refresh_token")
                     .scopes(SCOPE)
                     .authorities("oauth2")
                     .secret(CLIENT_SECRET);
+            // 客户端访问方式配置数据在数据库中
+//            clients.withClientDetails(clientDetails());
+        }
+
+        @Bean
+        public ClientDetailsService clientDetails() {
+            return new JdbcClientDetailsService(dataSource);
         }
 
         @Override

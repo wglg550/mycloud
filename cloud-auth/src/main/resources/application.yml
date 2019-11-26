@@ -69,3 +69,8 @@ eureka:
 #    hystrix:
 #      enabled: true
 ##########################feign-hystrix开启##########################
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3

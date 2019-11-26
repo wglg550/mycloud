@@ -20,6 +20,8 @@ $log:
 eureka:
   instance:
     hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
   client:
     #避免eureka向自己进行注册
     register-with-eureka: false
