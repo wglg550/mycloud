@@ -1,3 +1,26 @@
+#db.url=jdbc:mysql://localhost:3306/spring_cloud_demo?useUnicode=true&characterEncoding=UTF-8
+#db.username=root
+#db.password=123456789
+#db.driver=com.mysql.jdbc.Driver
+#ribbon.ReadTimeout=1200000
+#ribbon.ConnectTimeout=1200000
+#ribbon.MaxTotalHttpConnections=1000
+#ribbon.MaxHttpConnectionsPerHost=1000
+#hystrix.timeoutInMilliseconds=600000
+#zuul.basic.path=/basic/**
+#zuul.basic.serviceId=CLOUD-BASIC
+#zuul.auth.path=/auth/**
+#zuul.auth.serviceId=CLOUD-AUTH
+#zuul.connect-timeout-millis=100000
+#zuul.socket-timeout-millis=600000
+#feign.enabled=true
+#security.oauth2.server=http://${spring.cloud.client.ip-address}:8112
+#security.oauth2.client-id=client_id
+#security.oauth2.client-secret=client_secret
+#security.oauth2.loadBalanced=true
+#security.oauth2.token-info-uri=/oauth/check_token
+#urls.filter=/basic/user/login/**,/basic/user/register/**,/basic/user/findByPhone/**urls.filter=/basic/user/login/**,/basic/user/register/**,/basic/user/findByPhone/**
+
 #端口和初始路径配置
 #server:
 #  port: 2111
@@ -73,7 +96,7 @@ hystrix:
 #  client:
 #      service-url:
 #          defaultZone: http://root:root@eureka-host:1111/eureka/
-#           defaultZone: http://eureka-host:1111/eureka/
+##           defaultZone: http://eureka-host:1111/eureka/
 #zuul配置
 zuul:
 #  #添加代理头

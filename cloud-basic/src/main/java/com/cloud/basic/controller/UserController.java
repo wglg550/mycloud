@@ -8,8 +8,9 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
+//import org.springframework.beans.factory.annotation.Value;
+//import org.springframework.security.core.Authentication;
+//import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,6 +30,15 @@ import java.util.Objects;
 public class UserController {
     @Autowired
     SUserRepo userRepo;
+
+//    @Value("${$log.level.default}")
+//    private String level;
+//
+//    @Value("${test.default}")
+//    private String test;
+//
+//    @Value("${server.port}")
+//    private int label;
 
     @ApiOperation(value = "用户登录接口")
     @GetMapping("/login")
@@ -70,7 +80,7 @@ public class UserController {
     @ApiOperation(value = "用户查重接口")
     @GetMapping("/selectRepeat")
     public Integer selectRepeat(@ApiParam(value = "手机号码", required = true) @RequestParam String phone) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         return null;
     }
 }

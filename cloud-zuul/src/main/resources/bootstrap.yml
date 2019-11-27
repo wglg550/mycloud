@@ -9,6 +9,7 @@ spring:
   #指定用于获取配置的配置中心服务(应用)名称
   cloud:
     config:
+      name: cloud-config
       discovery:
         enabled: true
         serviceId: cloud-config
@@ -16,6 +17,9 @@ spring:
       profile: dev
       #指定分支版本，默认为master
       label: dev
+      uri: http://127.0.0.1:1112
+  profiles:
+    active: dev
 
 #eureka配置
 eureka:

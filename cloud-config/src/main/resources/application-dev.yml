@@ -6,13 +6,10 @@ server:
 
 #eureka配置
 eureka:
-  instance:
-    prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}
-  client:
+    client:
       service-url:
-           defaultZone: http://root:root@eureka-host:1111/eureka/
-#           defaultZone: http://eureka-host:1111/eureka/
+#           defaultZone: http://root:root@eureka-host:1111/eureka/
+           defaultZone: http://eureka-host:1111/eureka/
 
 #日志配置
 $log:

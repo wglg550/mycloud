@@ -1,0 +1,26 @@
+#端口和初始路径配置
+server:
+  port: 8111
+
+#项目名称
+spring:
+  application:
+  #指定用于获取配置的配置中心服务(应用)名称
+    name: cloud-basic
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: cloud-config
+      profile: dev
+      label: dev
+
+##eureka配置
+eureka:
+#  instance:
+#    prefer-ip-address: true
+#    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    serviceUrl:
+#      defaultZone: http://root:root@eureka-host:1111/eureka/
+           defaultZone: http://eureka-host:1111/eureka/

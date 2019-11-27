@@ -10,7 +10,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+//import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+//import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+//import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+//import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @ComponentScan(basePackages = {"com.cloud.basic"
@@ -35,4 +38,18 @@ public class CloudBasicApplication {
         SpringApplication.run(CloudBasicApplication.class, args);
     }
 
+    /**
+     * 必须关闭csrf 不然client注册不上
+     * @Date 22:01 2019/7/12
+     **/
+//    @EnableWebSecurity
+//    public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+//        @Override
+//        protected void configure(HttpSecurity http) throws Exception {
+//            http.csrf().ignoringAntMatchers("/druid/*");
+////            super.configure(http);
+////            http.csrf().disable();
+////            super.configure(http);
+//        }
+//    }
 }
