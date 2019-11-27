@@ -1,5 +1,6 @@
-#项目名称
 spring:
+  application:
+      name: cloud-basic
   #数据源配置
   datasource:
 #      url: jdbc:mysql://localhost:3306/spring_cloud_demo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
