@@ -22,5 +22,5 @@ eureka:
 #    instance-id: ${spring.cloud.client.ip-address}:${server.port}
   client:
     serviceUrl:
-#      defaultZone: http://root:root@eureka-host:1111/eureka/
-           defaultZone: http://eureka-host:1111/eureka/
+      defaultZone: http://root:root@eureka-host:1111/eureka/
+#           defaultZone: http://eureka-host:1111/eureka/
