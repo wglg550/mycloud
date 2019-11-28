@@ -24,7 +24,7 @@ spring:
 #日志配置
 $log:
   level:
-  default: ${config.log.level}
+  default: info
 
 #zuul配置
 #单实例配置,如果一个请求http://localhost:6069/user-service/hello就被请求转发到http://localhost:8080/hello地址
