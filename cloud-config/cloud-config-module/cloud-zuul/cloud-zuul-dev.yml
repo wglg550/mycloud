@@ -86,7 +86,6 @@ zuul:
         serviceId: CLOUD-BASIC
         sensitiveHeaders:
     cloud-auth:
-
         path: /auth/**
         serviceId: CLOUD-AUTH
         sensitiveHeaders:
@@ -141,3 +140,5 @@ urls:
   - /basic/user/login/**
   - /basic/user/register/**
   - /basic/user/findByPhone/**
+  - /auth/oauth/**
+  - /auth/restIndex/**
