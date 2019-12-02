@@ -141,9 +141,7 @@ security:
 #不需要鉴权的url
 urls:
   anon:
-  - /basic/user/login/**
-  - /basic/user/register/**
-  - /basic/user/findByPhone/**
+  - /basic/user/**
   - /auth/oauth/**
   #测试用
   - /auth/restIndex/**
