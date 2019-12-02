@@ -121,16 +121,20 @@ feign:
 #management:
 #  security:
 #    enabled: false
+auth:
+  path: http://${spring.cloud.client.ip-address}:8112
+
 security:
-  auth:
-    server: http://${spring.cloud.client.ip-address}:8112
   oauth2:
+    authorization:
+      check-token-access: ${auth.path}/oauth/check_token
+    resource:
+      access-token-uri: ${auth.path}/oauth/check_token
+      token-info-uri: ${auth.path}/oauth/check_token
     client:
       client-id: client_id
       client-secret: client_secret
-    resource:
-      loadBalanced: true
-      token-info-uri: ${security.auth.server}/oauth/check_token #验证auth服务中验证token
+      access-token-uri: ${auth.path}/oauth/token
       #jwt:
         #key-uri: ${security.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
 
@@ -141,4 +145,5 @@ urls:
   - /basic/user/register/**
   - /basic/user/findByPhone/**
   - /auth/oauth/**
+  #测试用
   - /auth/restIndex/**
