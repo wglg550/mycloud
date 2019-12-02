@@ -71,7 +71,7 @@ public class SUserEntity implements UserDetails {
 
     @Override
     public String getUsername() {
-        return name;
+        return phone;
     }
 
     @Override

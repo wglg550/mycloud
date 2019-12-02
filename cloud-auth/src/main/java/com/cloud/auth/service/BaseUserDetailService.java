@@ -26,10 +26,7 @@ public class BaseUserDetailService implements UserDetailsService {
     public SUserEntity loadUserByUsername(String username) throws UsernameNotFoundException {
         SUserEntity userEntity = userFeignService.findByPhone(username);
         if (Objects.isNull(userEntity)) {
-            userEntity = userFeignService.findByName(username);
-            if (Objects.isNull(userEntity)) {
-                throw new UsernameNotFoundException("用户不存在或密码错误");
-            }
+            throw new UsernameNotFoundException("用户不存在或密码错误");
         }
         return userEntity;
     }
