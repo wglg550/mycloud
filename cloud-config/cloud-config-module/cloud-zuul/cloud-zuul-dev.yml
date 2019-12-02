@@ -121,18 +121,20 @@ feign:
 #management:
 #  security:
 #    enabled: false
+auth:
+  path: http://${spring.cloud.client.ip-address}:8112
 
 security:
   oauth2:
     authorization:
-      check-token-access: http://localhost:8112/oauth/check_token
+      check-token-access: ${auth.path}/oauth/check_token
     resource:
-      access-token-uri: http://localhost:8112/oauth/check_token
-      token-info-uri: http://localhost:8112/oauth/check_token
+      access-token-uri: ${auth.path}/oauth/check_token
+      token-info-uri: ${auth.path}/oauth/check_token
     client:
       client-id: client_id
       client-secret: client_secret
-      access-token-uri: http://localhost:8112/oauth/token
+      access-token-uri: ${auth.path}/oauth/token
       #jwt:
         #key-uri: ${security.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
 
