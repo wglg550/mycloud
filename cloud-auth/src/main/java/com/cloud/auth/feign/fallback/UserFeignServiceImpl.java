@@ -18,4 +18,9 @@ public class UserFeignServiceImpl implements UserFeignService {
     public SUserEntity findByPhone(String phone) {
         return null;
     }
+
+    @Override
+    public SUserEntity findByName(String name) {
+        return null;
+    }
 }

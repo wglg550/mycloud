@@ -31,4 +31,12 @@ public interface SUserRepo extends JpaRepository<SUserEntity, Long>, JpaSpecific
      * @return
      */
     SUserEntity findByPhone(String phone);
+
+    /**
+     * 根据姓名查询登录用户
+     *
+     * @param name
+     * @return
+     */
+    SUserEntity findByName(String name);
 }

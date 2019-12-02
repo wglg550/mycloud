@@ -97,7 +97,7 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
                     .authorizeRequests()
 //                    .antMatchers("/product/**").access("#oauth2.hasScope('select') and hasRole('ROLE_USER')")
                     .antMatchers("/oauth/**").permitAll()
-                    .antMatchers("/restIndex/**").permitAll()
+                    .antMatchers("/restIndex/**").permitAll()//测试用
                     .anyRequest().authenticated();//配置order访问控制，必须认证过后才可以访问
         }
     }
@@ -121,7 +121,9 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
 //            //配置客户端
             clients.inMemory().withClient(CLIENT_ID)
                     .resourceIds(DEMO_RESOURCE_ID)
-                    .authorizedGrantTypes("password", "refresh_token")
+//                    .authorizedGrantTypes("password", "refresh_token")
+                    .authorizedGrantTypes("authorization_code", "client_credentials", "refresh_token",
+                    "password", "implicit")
                     .scopes(SCOPE)
                     .authorities("oauth2")
                     .secret(CLIENT_SECRET);
@@ -146,9 +148,13 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
                     .userDetailsService(userDetailsService)
                     // 2018-4-3 增加配置，允许 GET、POST 请求获取 token，即访问端点：oauth/token
                     .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST);
-            endpoints.reuseRefreshTokens(true);
+            //该字段设置设置refresh token是否重复使用,true:reuse;false:no reuse.
+            //true情况下refreshToken只能拿第一次的重新刷新，false情况下每次都要拿最新的refreshToken请求
+            endpoints.reuseRefreshTokens(false);
             //oauth2登录异常处理
             endpoints.exceptionTranslator(new BootOAuth2WebResponseExceptionTranslator());
+//            endpoints.authenticationManager(authenticationManager);
+//            endpoints.userDetailsService(userDetailsService);
         }
 
         /**

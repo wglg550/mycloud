@@ -8,13 +8,14 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.beans.factory.annotation.Value;
-//import org.springframework.security.core.Authentication;
-//import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Objects;
+
+//import org.springframework.beans.factory.annotation.Value;
+//import org.springframework.security.core.Authentication;
+//import org.springframework.security.core.context.SecurityContextHolder;
 
 /**
  * @Description: user controller
@@ -51,6 +52,12 @@ public class UserController {
     @GetMapping("/findByPhone")
     public SUserEntity findByPhone(@ApiParam(value = "手机号码", required = true) @RequestParam String phone) {
         return userRepo.findByPhone(phone);
+    }
+
+    @ApiOperation(value = "根据姓名查找用户")
+    @GetMapping("/findByName")
+    public SUserEntity findByName(@ApiParam(value = "姓名", required = true) @RequestParam String name) {
+        return userRepo.findByName(name);
     }
 
     @ApiOperation(value = "用户查询接口")

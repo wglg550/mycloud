@@ -27,5 +27,8 @@ public interface UserFeignService {
      */
     @RequestMapping(value = "/user/findByPhone", method = RequestMethod.GET, produces = "application/json")
     SUserEntity findByPhone(@ApiParam(value = "手机号码", required = true) @RequestParam("phone") String phone);
+
+    @RequestMapping(value = "/user/findByName", method = RequestMethod.GET, produces = "application/json")
+    SUserEntity findByName(@ApiParam(value = "姓名", required = true) @RequestParam("name") String name);
 }
 
