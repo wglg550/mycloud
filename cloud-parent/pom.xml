@@ -289,4 +289,12 @@
         </snapshotRepository>
     </distributionManagement>
 
+    <modules>
+        <module>../cloud-eureka</module>
+        <module>../cloud-commons</module>
+        <module>../cloud-zuul</module>
+        <module>../cloud-config</module>
+        <module>../cloud-basic</module>
+        <module>../cloud-auth</module>
+    </modules>
 </project>
