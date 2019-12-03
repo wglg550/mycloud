@@ -50,7 +50,8 @@ public class CloudBasicApplication {
                     .antMatchers("/webjars/**")
                     .antMatchers("v2/**")
                     .antMatchers("/swagger-resources/**")
-                    .antMatchers("/druid/**");
+                    .antMatchers("/druid/**")
+                    .antMatchers("/index.html");
         }
     }
 }
