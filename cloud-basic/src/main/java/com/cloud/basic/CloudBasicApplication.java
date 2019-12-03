@@ -51,7 +51,7 @@ public class CloudBasicApplication {
                     .antMatchers("v2/**")
                     .antMatchers("/swagger-resources/**")
                     .antMatchers("/druid/**")
-                    .antMatchers("/index.html");
+                    .antMatchers("/**/index.html");
         }
     }
 }
