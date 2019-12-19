@@ -1,9 +1,13 @@
 #端口和初始路径配置
 #server:
-#  port: 2111
+#  port: 8112
+#  servlet:
+#    context-path: /auth
 
 #项目名称
 spring:
+  application:
+    name: cloud-auth
   #数据源配置
   datasource:
     url: jdbc:mysql://localhost:3306/spring_cloud_demo?useUnicode=true&characterEncoding=UTF-8
@@ -11,9 +15,9 @@ spring:
     password: 123456789
     driver-class-name: com.mysql.jdbc.Driver
   #redis
-  #redis:
-    #host: redis-host
-    #port: 6379
+  redis:
+    host: redis-host
+    port: 6379
   #mongodb
   #data:
     #mongodb:
@@ -26,35 +30,12 @@ $log:
   level:
   default: info
 
-#zuul配置
-#单实例配置,如果一个请求http://localhost:6069/user-service/hello就被请求转发到http://localhost:8080/hello地址
-#zuul.routes.user-service.path=/user-service/**
-#zuul.routes.user-service.url=http://localhost:8080/
-#ribbon:
-  #eureka:
-    #enabled: false #配置zuul路由时用将此属性设置为false
-ribbon:
-#建立连接所用的时间，适用于网络状况正常的情况下，两端连接所用的时间。
-  ReadTimeout: 1200000
-#建立连接后从服务器读取到可用资源所用的时间。
-  ConnectTimeout: 1200000
-  MaxTotalHttpConnections: 1000
-  MaxHttpConnectionsPerHost: 1000
-
-hystrix:
-    command:
-        default:
-            execution:
-                isolation:
-                    thread:
-                        timeoutInMilliseconds: 600000 #毫秒单位
-
-#多实例配置
-#user-service.ribbon.listOfServers=http://localhost:8080/,http://localhost:8081/
-#cloud-client:
-#  ribbon:
-#    listOfServers: 127.0.0.1:8800 #为cloud-client服务指定一组服务地址，应该是用于负载均衡
-
+#eureka配置
+#eureka:
+#    client:
+#      service-url:
+#          defaultZone: http://root:root@eureka-host:1111/eureka/
+#           defaultZone: http://eureka-host:1111/eureka/
 #logging:
 #  path: /logs
 #  file: springbootdemo.log
@@ -64,80 +45,27 @@ hystrix:
 #    console: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
 #    file: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
 
+#jwt生成密钥密码
+#test123
 
-#eureka配置
-#eureka:
-#  instance:
-#    prefer-ip-address: true
-#    instance-id: ${spring.cloud.client.ip-address}:${server.port}
-#  client:
-#      service-url:
-#          defaultZone: http://root:root@eureka-host:1111/eureka/
-#           defaultZone: http://eureka-host:1111/eureka/
-#zuul配置
-zuul:
-#  #添加代理头
-#  add-proxy-headers: true
-#  # 敏感头信息（重要）
-#  sensitive-headers:
-  routes:
-    cloud-basic:
-        path: /basic/**
-        serviceId: CLOUD-BASIC
-        sensitiveHeaders:
-    cloud-auth:
-
-        path: /auth/**
-        serviceId: CLOUD-AUTH
-        sensitiveHeaders:
-  host:
-    connect-timeout-millis: 100000
-    socket-timeout-millis: 600000
-#feign-hystrix配置
-feign:
-  hystrix:
-    enabled: true
-#    使用'*'可忽略所有微服务
-#  ignored-services: '*'
-
-#zuul:
-#  routes:
-#    sina:
-#      path: /sina/**
-#      url: http://www.sina.com.cn
-#    baidu:
-#      path: /baidu/**
-#      url: http://www.baidu.com
-
-#security:
-#  basic:
-#    enabled: false
-#  oauth2:
-#    client:
-#      access-token-uri: http://learn-shop-public-auth/uaa/oauth/token
-#      user-authorization-uri: http://learn-shop-public-auth/uaa/oauth/authorize
-#    resource:
-#      user-info-uri: http://learn-shop-public-auth/uaa/user
-#      prefer-token-info: false
-#management:
-#  security:
-#    enabled: false
-security:
-  auth:
-    server: http://${service.client.ipAddress}:8112
-  oauth2:
-    client:
-      client-id: client_id
-      client-secret: client_secret
-    resource:
-      loadBalanced: true
-      token-info-uri: ${security.auth.server}/oauth/check_token #验证auth服务中验证token
-      #jwt:
-        #key-uri: ${security.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
-
-#不需要鉴权的url
-urls:
-  anon:
-  - /basic/user/login/**
-  - /basic/user/register/**
-  - /basic/user/findByPhone/**
+##########################feign-hystrix开启##########################
+#ribbon:
+##建立连接所用的时间，适用于网络状况正常的情况下，两端连接所用的时间。
+#  ReadTimeout: 1200000
+##建立连接后从服务器读取到可用资源所用的时间。
+#  ConnectTimeout: 1200000
+#  MaxTotalHttpConnections: 1000
+#  MaxHttpConnectionsPerHost: 1000
+#
+#hystrix:
+#    command:
+#        default:
+#            execution:
+#                isolation:
+#                    thread:
+#                        timeoutInMilliseconds: 600000 #毫秒单位
+#
+#feign:
+#    hystrix:
+#      enabled: true
+##########################feign-hystrix开启##########################
