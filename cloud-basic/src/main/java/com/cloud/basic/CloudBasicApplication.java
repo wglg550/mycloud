@@ -1,5 +1,6 @@
 package com.cloud.basic;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,9 +25,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
         , "com.cloud.commons"
 })//这里要扫commons的全局异常处理包
 //主要就是定义扫描的路径从中找出标识了需要装配的类自动装配到spring的bean容器中,做过web开发的同学一定都有用过@Controller，@Service，@Repository注解，查看其源码你会发现，他们中有一个共同的注解@Component，没错@ComponentScan注解默认就会装配标识了@Controller，@Service，@Repository，@Component注解的类到spring容器中
-@EntityScan(basePackages = {"com.cloud.basic"})//用来扫描和发现指定包及其子包中的Entity定义
-@EnableJpaRepositories(basePackages = {"com.cloud.basic"})//注解用于Srping JPA的代码配置
-//@EnableJpaAuditing //Spring Data JPA 审计,开启后自动注入createTime和ceateUser
+//@EntityScan(basePackages = {"com.cloud.basic"})//用来扫描和发现指定包及其子包中的Entity定义
+//@EnableJpaRepositories(basePackages = {"com.cloud.basic"})//注解用于Srping JPA的代码配置,如果是多数据源，此行要煮熟
+//@EnableJpaAuditing //Spring Data JPA 审计,开启后自动注入createTime和ceateUser,如果是多数据源，此行要煮熟
 @SpringBootApplication
 @EnableEurekaClient   //只有eureka为注册中心时可以发现服务
 //@EnableDiscoveryClient //引用其他注册中心也可以发现服务

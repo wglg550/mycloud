@@ -1,4 +1,4 @@
-package com.cloud.basic.entity;
+package com.cloud.basic.master.entity;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;

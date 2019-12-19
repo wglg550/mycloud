@@ -1,6 +1,6 @@
-package com.cloud.basic.dao;
+package com.cloud.basic.master.dao;
 
-import com.cloud.basic.entity.SUserEntity;
+import com.cloud.basic.master.entity.SUserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
  * @Date: 2019/10/11
  */
 @Repository
-public interface SUserRepo extends JpaRepository<SUserEntity, Long>, JpaSpecificationExecutor<SUserEntity> {
+public interface MasterSUserRepo extends JpaRepository<SUserEntity, Long>, JpaSpecificationExecutor<SUserEntity> {
 
     /**
      * 根据手机号码和密码查询登录用户

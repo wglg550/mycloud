@@ -1,17 +1,19 @@
 package com.cloud.basic.controller;
 
-import com.cloud.basic.dao.SUserRepo;
-import com.cloud.basic.entity.SUserEntity;
+import com.cloud.basic.master.dao.MasterSUserRepo;
+import com.cloud.basic.master.entity.SUserEntity;
+import com.cloud.basic.slave.dao.SlaveSUserRepo;
 import com.cloud.commons.Exception.BusinessException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Objects;
 
@@ -33,10 +35,13 @@ import java.util.Objects;
 @RefreshScope //config手动刷新配置，必须post调用client:端口,如:{{httpLocal}}:8111/actuator/refresh
 public class UserController {
     @Autowired
-    SUserRepo userRepo;
+    MasterSUserRepo userRepo;
 
-    @Value("${test_refresh}")
-    private String testRefresh;
+    @Resource
+    SlaveSUserRepo slaveSUserRepo;
+
+//    @Value("${test_refresh}")
+//    private String testRefresh;//config手动刷新用
 //
 //    @Value("${test.default}")
 //    private String test;
@@ -57,6 +62,12 @@ public class UserController {
         return userRepo.findByPhone(phone);
     }
 
+    @ApiOperation(value = "根据手机号查找用户slave")
+    @GetMapping("/findByPhoneSlave")
+    public com.cloud.basic.slave.entity.SUserEntity findByPhoneSlave(@ApiParam(value = "手机号码", required = true) @RequestParam String phone) {
+        return slaveSUserRepo.findByPhone(phone);
+    }
+
     @ApiOperation(value = "根据姓名查找用户")
     @GetMapping("/findByName")
     public SUserEntity findByName(@ApiParam(value = "姓名", required = true) @RequestParam String name) {
@@ -71,6 +82,7 @@ public class UserController {
 
     @ApiOperation(value = "用户注册接口")
     @PostMapping("/register")
+    @Transactional
     public Boolean register(@ApiParam(value = "用户注册信息：国家|姓名|密码|年龄|性别|地址|QQ号|微信号|手机号码|邮箱", required = true) @RequestBody SUserEntity userEntity) throws Exception {
 //        String encodedText = Base64Util.encoder(String.valueOf(userEntity.getAge()));
 //        Base64Util.decoder(encodedText);
@@ -87,6 +99,17 @@ public class UserController {
         return userEntity.getId() != null ? true : false;
     }
 
+    @ApiOperation(value = "用户注册接口Slave")
+    @PostMapping("/registerSlave")
+    @Transactional
+    public Boolean registerSlave(@ApiParam(value = "用户注册信息：国家|姓名|密码|年龄|性别|地址|QQ号|微信号|手机号码|邮箱", required = true) @RequestBody com.cloud.basic.slave.entity.SUserEntity userEntity) throws Exception {
+        if (Objects.isNull(userEntity)) {
+            throw new BusinessException("registerException", "userEntity不能为空");
+        }
+        userEntity = slaveSUserRepo.save(userEntity);
+        return userEntity.getId() != null ? true : false;
+    }
+
     @ApiOperation(value = "用户查重接口")
     @GetMapping("/selectRepeat")
     public Integer selectRepeat(@ApiParam(value = "手机号码", required = true) @RequestParam String phone) {
@@ -97,6 +120,6 @@ public class UserController {
     @ApiOperation(value = "testRefresh")
     @GetMapping("/testRefresh")
     public void testRefresh() {
-        log.info(testRefresh);
+//        log.info(testRefresh);
     }
 }

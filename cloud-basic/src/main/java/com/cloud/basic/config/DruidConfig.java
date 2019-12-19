@@ -1,15 +1,11 @@
 package com.cloud.basic.config;
 
-import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import javax.sql.DataSource;
 
 /**
  * @Description: druid数据源配置
@@ -44,10 +40,13 @@ public class DruidConfig {
         return filterRegistrationBean;
     }
 
-    @Bean
-    @ConfigurationProperties(prefix = "spring.datasource")
-    public DataSource druid() {
-        return new DruidDataSource();
-    }
+    /**
+     * 单数据源可以直接放开以下注释行
+     */
+//    @Bean
+//    @ConfigurationProperties(prefix = "spring.datasource")
+//    public DataSource druid() {
+//        return new DruidDataSource();
+//    }
 }
 
