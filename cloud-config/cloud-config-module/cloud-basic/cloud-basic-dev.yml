@@ -91,8 +91,3 @@ $log:
 #    file: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
 
 test_refresh: test2
-
-endpoints:                  #SpringCloud 2.0.0版本以后暴露接口方式
-    web:
-      exposure:
-        include: "*"
