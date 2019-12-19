@@ -53,6 +53,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .and()
                 .authorizeRequests()
 //                    .antMatchers("/product/**").access("#oauth2.hasScope('select') and hasRole('ROLE_USER')")
+                .antMatchers("/actuator/**").permitAll()
                 .antMatchers("/user/**").permitAll()
                 .antMatchers("/index/**").permitAll()
                 .antMatchers("/druid/*").permitAll()

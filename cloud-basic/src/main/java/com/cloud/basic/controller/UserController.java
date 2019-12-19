@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,12 +30,13 @@ import java.util.Objects;
 @Slf4j
 @RestController
 @RequestMapping("/user")
+@RefreshScope //config手动刷新配置，必须post调用client:端口,如:{{httpLocal}}:8111/actuator/refresh
 public class UserController {
     @Autowired
     SUserRepo userRepo;
 
-//    @Value("${$log.level.default}")
-//    private String level;
+    @Value("${test_refresh}")
+    private String testRefresh;
 //
 //    @Value("${test.default}")
 //    private String test;
@@ -89,5 +92,11 @@ public class UserController {
     public Integer selectRepeat(@ApiParam(value = "手机号码", required = true) @RequestParam String phone) {
 //        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         return null;
+    }
+
+    @ApiOperation(value = "testRefresh")
+    @GetMapping("/testRefresh")
+    public void testRefresh() {
+        log.info(testRefresh);
     }
 }

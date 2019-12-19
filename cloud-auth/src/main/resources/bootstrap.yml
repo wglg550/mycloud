@@ -1,12 +1,12 @@
 #端口和初始路径配置
 server:
-  port: 8111
+  port: 8112
 
 #项目名称
 spring:
   application:
   #指定用于获取配置的配置中心服务(应用)名称
-    name: cloud-basic
+    name: cloud-auth
   cloud:
     config:
       discovery:
@@ -23,11 +23,4 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://root:root@eureka-host:1111/eureka/
-#     defaultZone: http://eureka-host:1111/eureka/
-
-#config手动刷新配置，必须post调用client:端口,如:{{httpLocal}}:8111/actuator/refresh
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+#           defaultZone: http://eureka-host:1111/eureka/
