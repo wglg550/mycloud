@@ -112,7 +112,8 @@ main:
 
 #日志配置
 logging:
-  level: info
+  level:
+   root: info
 
 #eureka配置
 #eureka:
