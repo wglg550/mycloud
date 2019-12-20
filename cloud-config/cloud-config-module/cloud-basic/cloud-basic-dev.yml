@@ -87,7 +87,7 @@ spring:
       #合并多个datasource监控
       use-global-data-source-stat: true
       # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
-      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrpt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOVGkjrriVEMVL+U0oyOiBlq2JiUMRKsGE5nXDYNRRphc9AK/PGw17dR0qYfznrPAl/wlxxneTMD2x+0hF50bQMCAwEAAQ==
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOVGkjrriVEMVL+U0oyOiBlq2JiUMRKsGE5nXDYNRRphc9AK/PGw17dR0qYfznrPAl/wlxxneTMD2x+0hF50bQMCAwEAAQ==
       #druid数据库密码加密配置
       #connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
       #druid数据库密码加密
