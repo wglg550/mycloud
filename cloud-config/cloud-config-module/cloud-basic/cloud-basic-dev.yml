@@ -12,12 +12,12 @@ spring:
   datasource:
     master:
 #      url: jdbc:mysql://localhost:3306/spring_cloud_demo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
-      url: jdbc:mysql://localhost:3306/spring_cloud_demo?useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://localhost:3306/spring_cloud_demo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
       username: root
       password: 123456789
 #      password: EXjRaBCvw3YkB18HH6tJthgeRUE/R24Sc6QiCPtaiUuZDLJBzp2Y27Pc3eDRQJZ2BaufYBaSyERcNjd7ekJ5fg==
-#      driver-class-name: com.mysql.cj.jdbc.Driver
-      driver-class-name: com.mysql.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
+#      driver-class-name: com.mysql.jdbc.Driver
       type: com.alibaba.druid.pool.DruidDataSource
       #下面为druid连接池的补充设置，应用到上面所有数据源中
       #初始化时建立物理连接的个数。初始化发生在显示调用init方法，或者第一次getConnection时
@@ -51,11 +51,11 @@ spring:
       # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
       connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
     slave:
-      url: jdbc:mysql://localhost:3306/spring_cloud_demo_slave?useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://localhost:3306/spring_cloud_demo_slave?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
       username: root
       password: 123456789
-#      driver-class-name: com.mysql.cj.jdbc.Driver
-      driver-class-name: com.mysql.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
+#      driver-class-name: com.mysql.jdbc.Driver
       type: com.alibaba.druid.pool.DruidDataSource
       #下面为druid连接池的补充设置，应用到上面所有数据源中
       #初始化时建立物理连接的个数。初始化发生在显示调用init方法，或者第一次getConnection时
