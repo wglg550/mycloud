@@ -15,7 +15,7 @@ spring:
       url: jdbc:mysql://localhost:3306/spring_cloud_demo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
       username: root
 #      password: 123456789
-      password: StT3UtEy3Yl43CKJHGVIXIyC3iAO7ukT18YSj5AXr+BLpQ6qn8PtR3C7eqqhKZApSimCnVvGTBnpWk89pi6+mA==
+      password: TxLgIGLLNXaaBoheQitMG0JSvJI4okWlBEz0pHG4H4iFIseDqtyRsj4O9+3W8v8/MBZpWOaiiV4roWlX4Lbfgg==
       driver-class-name: com.mysql.cj.jdbc.Driver
 #      driver-class-name: com.mysql.jdbc.Driver
       type: com.alibaba.druid.pool.DruidDataSource
@@ -49,7 +49,7 @@ spring:
       #合并多个datasource监控
       use-global-data-source-stat: true
       # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
-      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOCLeBzoNzKUC+bMrFGVcdhX27NboKwvJFIwzza4G9jcdt3DBdG522QOcxP1MRQouw1sXWK/ftLreJekKPHoP/kCAwEAAQ==
     slave:
       url: jdbc:mysql://localhost:3306/spring_cloud_demo_slave?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
       username: root
@@ -87,13 +87,13 @@ spring:
       #合并多个datasource监控
       use-global-data-source-stat: true
       # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
-      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK/JXvSKt4qDJlSHaJQDCd7SYCYI5HQxdU+bek4Hoa0LBmoEd9bFOhlmDUPFoRVUDpEaq/sudpYd24FhL8k1GMECAwEAAQ==
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;
       #druid数据库密码加密配置
       #connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
       #druid数据库密码加密
-      #filter:
-      # config:
-      #   enabled: true
+#      filter:
+#       config:
+#         enabled: true
   jpa:
     open-in-view: false
 main:
