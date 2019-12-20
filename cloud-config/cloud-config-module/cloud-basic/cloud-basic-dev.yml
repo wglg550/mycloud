@@ -111,9 +111,8 @@ main:
       #uri: mongodb://db-host:27017/k12-mall
 
 #日志配置
-log:
-  level:
-  default: info
+logging:
+  level: info
 
 #eureka配置
 #eureka:
