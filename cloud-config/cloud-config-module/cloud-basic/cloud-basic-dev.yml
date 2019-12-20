@@ -49,7 +49,7 @@ spring:
       #合并多个datasource监控
       use-global-data-source-stat: true
       # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
-      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOCLeBzoNzKUC+bMrFGVcdhX27NboKwvJFIwzza4G9jcdt3DBdG522QOcxP1MRQouw1sXWK/ftLreJekKPHoP/kCAwEAAQ==
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;publickey=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOCLeBzoNzKUC+bMrFGVcdhX27NboKwvJFIwzza4G9jcdt3DBdG522QOcxP1MRQouw1sXWK/ftLreJekKPHoP/kCAwEAAQ==
     slave:
       url: jdbc:mysql://localhost:3306/spring_cloud_demo_slave?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
       username: root
