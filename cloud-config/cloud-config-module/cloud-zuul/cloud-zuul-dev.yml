@@ -22,9 +22,9 @@ spring:
       #uri: mongodb://db-host:27017/k12-mall
 
 #日志配置
-$log:
+logging:
   level:
-  default: info
+   root: info
 
 #zuul配置
 #单实例配置,如果一个请求http://localhost:6069/user-service/hello就被请求转发到http://localhost:8080/hello地址

@@ -11,9 +11,9 @@ spring:
       password: root
 
 #日志配置
-$log:
+logging:
   level:
-  default: info
+   root: info
 
 
 #eureka配置

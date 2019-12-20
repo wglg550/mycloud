@@ -12,9 +12,9 @@ eureka:
 #           defaultZone: http://eureka-host:1111/eureka/
 
 #日志配置
-$log:
+logging:
   level:
-  default: info
+   root: info
 
 spring:
   application:

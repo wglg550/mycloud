@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,8 +41,8 @@ public class UserController {
     @Resource
     SlaveSUserRepo slaveSUserRepo;
 
-//    @Value("${test_refresh}")
-//    private String testRefresh;//config手动刷新用
+    @Value("${logging.level.root}")
+    private String logLevel;//config手动刷新用
 //
 //    @Value("${test.default}")
 //    private String test;
@@ -120,6 +121,10 @@ public class UserController {
     @ApiOperation(value = "testRefresh")
     @GetMapping("/testRefresh")
     public void testRefresh() {
-//        log.info(testRefresh);
+        log.debug("debug:{}", logLevel);
+        log.info("info:{}", logLevel);
+        log.warn("warn:{}", logLevel);
+        log.trace("trace:{}", logLevel);
+        log.error("error:{}", logLevel);
     }
 }

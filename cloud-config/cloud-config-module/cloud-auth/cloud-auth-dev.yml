@@ -26,9 +26,9 @@ spring:
       #uri: mongodb://db-host:27017/k12-mall
 
 #日志配置
-$log:
+logging:
   level:
-  default: info
+   root: info
 
 #eureka配置
 #eureka:
