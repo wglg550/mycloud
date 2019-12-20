@@ -111,7 +111,7 @@ main:
       #uri: mongodb://db-host:27017/k12-mall
 
 #日志配置
-$log:
+log:
   level:
   default: info
 
