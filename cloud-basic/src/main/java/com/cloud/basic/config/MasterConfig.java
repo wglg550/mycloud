@@ -1,6 +1,7 @@
 package com.cloud.basic.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
@@ -15,6 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.annotation.Resource;
 import javax.persistence.EntityManager;
 import javax.sql.DataSource;
+import java.sql.SQLException;
 import java.util.Properties;
 
 /**
@@ -35,11 +37,42 @@ public class MasterConfig {
     @Resource
     private Properties jpaProperties;
 
+    @Value("${spring.datasource.master.url}")
+    private String url;
+
+    @Value("${spring.datasource.master.username}")
+    private String username;
+
+    @Value("${spring.datasource.master.password}")
+    private String password;
+
+    @Value("${spring.datasource.master.driver-class-name}")
+    private String driverClassName;
+
+    @Value("${spring.datasource.master.connect-properties}")
+    private String connectProperties;
+
+    @Value("${spring.datasource.master.filters}")
+    private String filters;
+
     @Bean(name = "masterDataSource")
     @Primary
     @ConfigurationProperties(prefix = "spring.datasource.master")
     public DataSource druid() {
-        return new DruidDataSource();
+        //如果需要加密passwrod，则必须手动配置以下信息，此乃druid兼容性问题
+        DruidDataSource dataSource = new DruidDataSource();
+        dataSource.setUrl(url);
+        dataSource.setUsername(username);
+        dataSource.setPassword(password);
+        dataSource.setDriverClassName(driverClassName);
+        dataSource.setConnectionProperties(connectProperties);
+        try {
+            dataSource.setFilters(filters);
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return dataSource;
     }
 
     @Bean(name = "entityManagerMaster")
