@@ -15,7 +15,7 @@ spring:
       url: jdbc:mysql://localhost:3306/spring_cloud_demo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
       username: root
 #      password: 123456789
-      password: 'MAZ/0RS5Q3Nj5BsJIlWp9mp3xPbP5Dg/V3oO8rY8BHHb5Eo6GSBSrGvpMb//21gvzaA/b2OQuKg2qzD0y7eWHQ=='
+      password: MAZ/0RS5Q3Nj5BsJIlWp9mp3xPbP5Dg/V3oO8rY8BHHb5Eo6GSBSrGvpMb//21gvzaA/b2OQuKg2qzD0y7eWHQ==
       driver-class-name: com.mysql.cj.jdbc.Driver
 #      driver-class-name: com.mysql.jdbc.Driver
       type: com.alibaba.druid.pool.DruidDataSource
@@ -50,7 +50,7 @@ spring:
       #合并多个datasource监控
       use-global-data-source-stat: true
       # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
-      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIbC+g4ReURNatBaovs+jVNt465CaqWPnIOjOmhUxycFak81DJbZiX9yvDwND0YH2L8DNojxe4MS4hzJ59AT9B8CAwEAAQ==;
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIbC+g4ReURNatBaovs+jVNt465CaqWPnIOjOmhUxycFak81DJbZiX9yvDwND0YH2L8DNojxe4MS4hzJ59AT9B8CAwEAAQ==
 #      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;
       filter:
         config:
