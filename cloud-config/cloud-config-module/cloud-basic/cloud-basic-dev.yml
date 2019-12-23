@@ -52,9 +52,6 @@ spring:
       # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
       connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIbC+g4ReURNatBaovs+jVNt465CaqWPnIOjOmhUxycFak81DJbZiX9yvDwND0YH2L8DNojxe4MS4hzJ59AT9B8CAwEAAQ==
 #      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;
-      filter:
-        config:
-          enabled: true   # 数据库过滤器
     slave:
       url: jdbc:mysql://localhost:3306/spring_cloud_demo_slave?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
       username: root
