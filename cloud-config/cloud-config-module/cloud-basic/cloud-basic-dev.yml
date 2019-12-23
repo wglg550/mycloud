@@ -14,8 +14,8 @@ spring:
 #      url: jdbc:mysql://localhost:3306/spring_cloud_demo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
       url: jdbc:mysql://localhost:3306/spring_cloud_demo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
       username: root
-      password: 123456789
-#      password: g91eHHcAvjjIXT0AIVoEUqnX7k2vY0sfTVmCJfTetgK5fZj18R6+/LFFvxzKLntBNy7DgFmB7nhoc+6ySKn+fA==
+#      password: 123456789
+      password: MAZ/0RS5Q3Nj5BsJIlWp9mp3xPbP5Dg/V3oO8rY8BHHb5Eo6GSBSrGvpMb//21gvzaA/b2OQuKg2qzD0y7eWHQ==
       driver-class-name: com.mysql.cj.jdbc.Driver
 #      driver-class-name: com.mysql.jdbc.Driver
       type: com.alibaba.druid.pool.DruidDataSource
@@ -45,13 +45,16 @@ spring:
       #要启用PSCache，必须配置大于0，当大于0时，poolPreparedStatements自动触发修改为true。在Druid中，不会存在Oracle下PSCache占用内存过多的问题，可以把这个数值配置大一些，比如说100
       max-pool-prepared-statement-per-connection-size: 20
       #配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
-#      filters: config,stat,wall,slf4j
-      filters: stat,wall,slf4j
+      filters: config,stat,wall,slf4j
+#      filters: stat,wall,slf4j
       #合并多个datasource监控
       use-global-data-source-stat: true
       # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
-#      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIQNXVw8prK5PKGux5WvlyypwDGTwW1grBP3f46NvaohosVYVXdf5UeZYYoAHgtJt5eCbacsMShEnp9QkjKdmZUCAwEAAQ==;
-      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIbC+g4ReURNatBaovs+jVNt465CaqWPnIOjOmhUxycFak81DJbZiX9yvDwND0YH2L8DNojxe4MS4hzJ59AT9B8CAwEAAQ==;
+#      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;
+      filter:
+        config:
+          enabled: true   # 数据库过滤器
     slave:
       url: jdbc:mysql://localhost:3306/spring_cloud_demo_slave?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
       username: root
