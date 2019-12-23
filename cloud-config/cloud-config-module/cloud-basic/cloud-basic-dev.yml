@@ -15,7 +15,7 @@ spring:
       url: jdbc:mysql://localhost:3306/spring_cloud_demo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
       username: root
 #      password: 123456789
-      password: MAZ/0RS5Q3Nj5BsJIlWp9mp3xPbP5Dg/V3oO8rY8BHHb5Eo6GSBSrGvpMb//21gvzaA/b2OQuKg2qzD0y7eWHQ==
+      password: 'MAZ/0RS5Q3Nj5BsJIlWp9mp3xPbP5Dg/V3oO8rY8BHHb5Eo6GSBSrGvpMb//21gvzaA/b2OQuKg2qzD0y7eWHQ=='
       driver-class-name: com.mysql.cj.jdbc.Driver
 #      driver-class-name: com.mysql.jdbc.Driver
       type: com.alibaba.druid.pool.DruidDataSource
