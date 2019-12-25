@@ -152,6 +152,7 @@ urls:
   - /basic/user/**
   - /auth/oauth/**
   - /hystrix/**
+  - /hystrix/images/**
   - /hystrix.stream/**
   #测试用
   - /auth/restIndex/**
