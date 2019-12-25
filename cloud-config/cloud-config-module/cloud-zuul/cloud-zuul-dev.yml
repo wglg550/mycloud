@@ -155,5 +155,6 @@ urls:
   - /webjars/**
   - /favicon.ico/**
   - /hystrix.stream/**
+  - /proxy.stream/**
   #测试用
   - /auth/restIndex/**
