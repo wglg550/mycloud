@@ -151,5 +151,6 @@ urls:
   anon:
   - /basic/user/**
   - /auth/oauth/**
+  - /hystrix/**
   #测试用
   - /auth/restIndex/**
