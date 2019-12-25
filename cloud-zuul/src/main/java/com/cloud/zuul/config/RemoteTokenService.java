@@ -23,7 +23,6 @@ import org.springframework.web.client.RestTemplate;
 import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
-
 @Component
 @Primary
 public class RemoteTokenService extends RemoteTokenServices {

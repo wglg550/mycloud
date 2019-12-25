@@ -4,6 +4,7 @@ import com.cloud.basic.master.dao.MasterSUserRepo;
 import com.cloud.basic.master.entity.SUserEntity;
 import com.cloud.basic.slave.dao.SlaveSUserRepo;
 import com.cloud.commons.Exception.BusinessException;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -11,10 +12,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Objects;
 
@@ -83,7 +84,7 @@ public class UserController {
 
     @ApiOperation(value = "用户注册接口")
     @PostMapping("/register")
-    @Transactional
+    @Transactional(value = "transactionManagerMaster")//多事务下要指定事务管理器名称
     public Boolean register(@ApiParam(value = "用户注册信息：国家|姓名|密码|年龄|性别|地址|QQ号|微信号|手机号码|邮箱", required = true) @RequestBody SUserEntity userEntity) throws Exception {
 //        String encodedText = Base64Util.encoder(String.valueOf(userEntity.getAge()));
 //        Base64Util.decoder(encodedText);
@@ -93,6 +94,7 @@ public class UserController {
 //        Sha1Util.verify(String.valueOf(userEntity.getAge()), encodedSHA1Text);
 //        String encrypt = AesUtil.encoder(String.valueOf(userEntity.getAge()), userEntity.getPhone());
 //        AesUtil.decoder(encrypt, userEntity.getPhone());
+//        userEntity = null;
         if (Objects.isNull(userEntity)) {
             throw new BusinessException("registerException", "userEntity不能为空");
         }
@@ -102,7 +104,7 @@ public class UserController {
 
     @ApiOperation(value = "用户注册接口Slave")
     @PostMapping("/registerSlave")
-    @Transactional
+    @Transactional(value = "transactionManagerSlave")//多事务下要指定事务管理器名称
     public Boolean registerSlave(@ApiParam(value = "用户注册信息：国家|姓名|密码|年龄|性别|地址|QQ号|微信号|手机号码|邮箱", required = true) @RequestBody com.cloud.basic.slave.entity.SUserEntity userEntity) throws Exception {
         if (Objects.isNull(userEntity)) {
             throw new BusinessException("registerException", "userEntity不能为空");
@@ -113,9 +115,13 @@ public class UserController {
 
     @ApiOperation(value = "用户查重接口")
     @GetMapping("/selectRepeat")
+//    hystrix使用
+    @HystrixCommand(fallbackMethod = "selectRepeatFallback")
     public Integer selectRepeat(@ApiParam(value = "手机号码", required = true) @RequestParam String phone) {
-//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        return null;
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();//获取权限信息
+//        int i = 1 / 0;
+        throw new BusinessException("registerException", "userEntity不能为空");//加了Hystrix后，全局异常不生效
+//        return null;
     }
 
     @ApiOperation(value = "testRefresh")
@@ -126,5 +132,10 @@ public class UserController {
         log.warn("warn:{}", logLevel);
         log.trace("trace:{}", logLevel);
         log.error("error:{}", logLevel);
+    }
+
+    //    hystrix回调
+    public Integer selectRepeatFallback(String phone) {
+        return 0;
     }
 }

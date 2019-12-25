@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement //spring开启事务支持
 @EnableFeignClients//fegin支持
 @EnableCircuitBreaker//hystrix服务降级
-//@EnableGlobalMethodSecurity(prePostEnabled = true)
+//@EnableGlobalMethodSecurity(prePostEnabled = true)//判断用户对某个控制层的方法是否具有访问权限
 public class CloudBasicApplication {
 
     public static void main(String[] args) {
