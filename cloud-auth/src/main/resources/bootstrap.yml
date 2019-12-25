@@ -15,7 +15,7 @@ spring:
       profile: dev
       label: dev
 
-##eureka配置
+#eureka配置
 eureka:
 #  instance:
 #    prefer-ip-address: true

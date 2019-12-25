@@ -1,0 +1,25 @@
+#端口和初始路径配置
+#server:
+#  port: 3111
+#  servlet:
+#    context-path: /zipkin
+
+#项目名称
+spring:
+  application:
+    name: cloud-zipkin
+  security:
+        user:
+          name: root
+          password: root
+
+#日志配置
+logging:
+  level:
+   root: info
+
+management:
+    metrics:
+      web:
+        server:
+          auto-time-requests: false
