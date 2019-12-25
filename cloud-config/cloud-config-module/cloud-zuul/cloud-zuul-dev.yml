@@ -7,11 +7,10 @@ spring:
   application:
     name: cloud-zuul
   zipkin:
-        base-url: http://localhost:3111
-    sleuth:
-        sampler:
-    #采样100%
-          probability: 1.0
+    base-url: http://localhost:3111
+  sleuth:
+    sampler:
+      probability: 1.0
   #数据源配置
   datasource:
     url: jdbc:mysql://localhost:3306/spring_cloud_demo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
