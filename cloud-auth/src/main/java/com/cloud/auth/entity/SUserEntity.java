@@ -3,14 +3,15 @@ package com.cloud.auth.entity;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.*;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
+import java.io.Serializable;
 import java.util.Collection;
 
 /**
@@ -20,13 +21,14 @@ import java.util.Collection;
  * @Author: wangliang
  * @Date: 2019/10/11
  */
-@Entity
-@Table(name = "s_user", schema = "spring_cloud_demo", catalog = "")
+//@Entity
+//@Table(name = "s_user", schema = "spring_cloud_demo", catalog = "")
 @Getter
 @Setter
-@DynamicInsert
-@DynamicUpdate
-public class SUserEntity implements UserDetails {
+//@DynamicInsert
+//@DynamicUpdate
+public class SUserEntity implements UserDetails, Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -57,10 +59,16 @@ public class SUserEntity implements UserDetails {
     @NotNull
     @ApiModelProperty(value = "邮箱")
     private String email;
+    @ApiModelProperty(value = "用户权限")
+    @Transient
+    private Collection<GrantedAuthority> authorities;
+
+    public void setAuthorities(Collection<GrantedAuthority> authorities) {
+        this.authorities = authorities;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        ArrayList<GrantedAuthority> authorities = new ArrayList<>();
         return authorities;
     }
 

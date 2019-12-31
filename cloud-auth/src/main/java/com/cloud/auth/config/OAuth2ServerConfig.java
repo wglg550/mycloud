@@ -15,13 +15,11 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
-import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
@@ -37,7 +35,7 @@ import java.util.Map;
 
 @Configuration
 @Order(Integer.MIN_VALUE)
-@EnableAuthorizationServer
+//@EnableAuthorizationServer
 public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
 
     private static final String DEMO_RESOURCE_ID = "mycloud";
@@ -98,12 +96,14 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
 //                    .antMatchers("/product/**").access("#oauth2.hasScope('select') and hasRole('ROLE_USER')")
                     .antMatchers("/oauth/**").permitAll()
                     .antMatchers("/restIndex/**").permitAll()//测试用
+//                    .antMatchers("/product/**").permitAll()
+//                    .antMatchers("/order/**").permitAll()
                     .anyRequest().authenticated();//配置order访问控制，必须认证过后才可以访问
         }
     }
 
     @Configuration
-    @EnableAuthorizationServer
+//    @EnableAuthorizationServer
     protected static class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
 
         @Autowired
@@ -119,21 +119,16 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
         @Override
         public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 //            //配置客户端
-            clients.inMemory().withClient(CLIENT_ID)
-                    .resourceIds(DEMO_RESOURCE_ID)
-//                    .authorizedGrantTypes("password", "refresh_token")
-                    .authorizedGrantTypes("authorization_code", "client_credentials", "refresh_token",
-                    "password", "implicit")
-                    .scopes(SCOPE)
-                    .authorities("oauth2")
-                    .secret(CLIENT_SECRET);
+//            clients.inMemory().withClient(CLIENT_ID)
+//                    .resourceIds(DEMO_RESOURCE_ID)
+////                    .authorizedGrantTypes("password", "refresh_token")
+//                    .authorizedGrantTypes("authorization_code", "client_credentials", "refresh_token",
+//                            "password", "implicit")
+//                    .scopes(SCOPE)
+//                    .authorities("oauth2")
+//                    .secret(CLIENT_SECRET);
             // 客户端访问方式配置数据在数据库中
-//            clients.withClientDetails(clientDetails());
-        }
-
-        @Bean
-        public ClientDetailsService clientDetails() {
-            return new JdbcClientDetailsService(dataSource);
+            clients.withClientDetails(new JdbcClientDetailsService(dataSource));
         }
 
         @Override
@@ -175,7 +170,13 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
         public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
             security
                     .allowFormAuthenticationForClients()
+//                    // 开启/oauth/token_key验证端口无权限访问
+//                    .tokenKeyAccess("permitAll()")
+//                    // 开启/oauth/check_token验证端口认证权限访问
+//                    .checkTokenAccess("isAuthenticated()");
+                    // 开启/oauth/token_key验证端口无权限访问
                     .tokenKeyAccess("isAuthenticated()")
+                    // 开启/oauth/check_token验证端口认证权限访问
                     .checkTokenAccess("permitAll()");
         }
 
