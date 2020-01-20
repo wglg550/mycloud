@@ -42,7 +42,7 @@ public class SUserEntity implements UserDetails, Serializable {
     private String password;
     @NotNull
     @ApiModelProperty(value = "年龄", example = "18")
-    private Long age;
+    private Integer age;
     @NotNull
 //    @Enumerated(value = EnumType.ORDINAL)//可以通过注解枚举的形式，也可以不通过注解
     @ApiModelProperty(value = "性别")
@@ -50,7 +50,7 @@ public class SUserEntity implements UserDetails, Serializable {
     @ApiModelProperty(value = "地址")
     private String address;
     @ApiModelProperty(value = "QQ号", example = "100000")
-    private Long qq;
+    private Integer qq;
     @ApiModelProperty(value = "微信号")
     private String wechat;
     @NotNull
