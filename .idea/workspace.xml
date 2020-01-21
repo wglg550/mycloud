@@ -7,14 +7,19 @@
     <list default="true" id="664d3c39-6a8d-48f9-b80d-18c053295953" name="Default" comment="commit by wangliang">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_3_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_3_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_2_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_2_1_10_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-config/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-parent/cloud-parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-parent/cloud-parent.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/debug/auth.debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug/auth.debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug/basic.debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug/basic.debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug/eureka.debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug/eureka.debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/debug/zuul.debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug/zuul.debug.log" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/cloud-parent/target/" />
@@ -24,6 +29,7 @@
     <ignored path="$PROJECT_DIR$/cloud-zuul/target/" />
     <ignored path="$PROJECT_DIR$/cloud-commons/target/" />
     <ignored path="$PROJECT_DIR$/cloud-config/target/" />
+    <ignored path="$PROJECT_DIR$/cloud-zipkin/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,20 +63,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="SystemConstant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/constant/SystemConstant.java">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+            <state relative-caret-position="133">
+              <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BusinessException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/Exception/BusinessException.java">
+      <file leaf-file-name="indexController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/controller/indexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            <state relative-caret-position="342">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SUserEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/master/entity/SUserEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="760">
+              <caret line="51" column="55" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,14 +93,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GlobalDefultExceptionHandler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/Exception/GlobalDefultExceptionHandler.java">
+      <file leaf-file-name="SUserEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/slave/entity/SUserEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+            <state relative-caret-position="760">
+              <caret line="51" column="21" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SUserEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/entity/SUserEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cloud-parent/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestEndpoints.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/controller/TestEndpoints.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -104,21 +146,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>maven-compiler-plugin</find>
-      <find>spring-boot-starter-jdbc</find>
-      <find>druid</find>
-      <find>spring-cloud-netflix-core</find>
-      <find>getTrn</find>
-      <find>spring-boot-maven-plugin</find>
-      <find>path</find>
-      <find>message</find>
-      <find>Detected</find>
-      <find>ExceptionHandler</find>
-      <find>aesEncryptToBytes</find>
-      <find>aesEncrypt</find>
-      <find>SecretKeySpec</find>
-      <find>base64Decode</find>
-      <find>spring-cloud-commons</find>
+      <find>clientDetails</find>
+      <find>check_token</find>
+      <find>GrantedAuthority</find>
+      <find>EnableAuthorizationServer</find>
+      <find>UserFeignService</find>
+      <find>BaseUserDetailService</find>
+      <find>baseUserDetailService</find>
+      <find>webSec</find>
+      <find>不允许访问</find>
+      <find>SUserEntity</find>
+      <find>eraseCredentials</find>
+      <find>ResultUtil</find>
+      <find>userDetailsService</find>
+      <find>spring-boot-devtools</find>
+      <find>WebSecurityConfigurerAdapter</find>
+      <find>AuthenticationProvider</find>
+      <find>EnableGlobalMethodSecurity</find>
+      <find>TokenEndpoint</find>
+      <find>ApiImplicitParam</find>
+      <find>WebMvcConfiguration</find>
+      <find>swagger2</find>
+      <find>logback.version</find>
+      <find>fast</find>
+      <find>tr</find>
+      <find>transaction</find>
+      <find>jpa</find>
+      <find>SqlUtil</find>
+      <find>@Modifying</find>
+      <find>Integer</find>
+      <find>BigDe</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -134,57 +191,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/config/HystrixConfiguration.java" />
-        <option value="$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/config/hystrixConfig.java" />
-        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/config/hystrixConfig.java" />
-        <option value="$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/filter/TokenFilter.java" />
-        <option value="$PROJECT_DIR$/cloud-basic/src/main/resources/assembly.xml" />
-        <option value="$PROJECT_DIR$/cloud-basic/shell/start.sh" />
-        <option value="$PROJECT_DIR$/cloud-basic/shell/stop.sh" />
-        <option value="$PROJECT_DIR$/cloud-auth/shell/start.sh" />
-        <option value="$PROJECT_DIR$/cloud-eureka/shell/start.sh" />
-        <option value="$PROJECT_DIR$/cloud-eureka/shell/stop.sh" />
-        <option value="$PROJECT_DIR$/cloud-auth/shell/stop.sh" />
-        <option value="$PROJECT_DIR$/cloud-eureka/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-zuul/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-zuul/shell/start.sh" />
-        <option value="$PROJECT_DIR$/cloud-zuul/shell/stop.sh" />
-        <option value="$PROJECT_DIR$/cloud-basic/.gitignore" />
-        <option value="$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/CloudZuulApplication.java" />
-        <option value="$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/filter/ZuulTokenFilter.java" />
         <option value="$PROJECT_DIR$/cloud-basic/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-auth/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/CloudBasicApplication.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/CloudCommonsApplication.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/utils/Result.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/enums/ExceptionResultEnum.java" />
-        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/entity/SUserEntity.java" />
-        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/enums/SexEnum.java" />
-        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/dao/SUserRepo.java" />
-        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/service/SUserService.java" />
-        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/service/impl/SUserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/Exception/BusinessException.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/config/ApplicationContext.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/config/SpringContextHolder.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/system/SpringContextHolder.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/system/StartRunning.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/utils/ResultUtil.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/bean/Result.java" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/config/MasterDataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/master.dao/SUserRepo.java" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/master/dao/SUserRepo.java" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/slave/dao/SUserRepo.java" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/master/dao/MasterSUserRepo.java" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/config/DruidConfig.java" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/config/ResourceServerConfig.java" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/config/SlaveConfig.java" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/resources/logback-spring.xml" />
+        <option value="$PROJECT_DIR$/cloud-config/src/main/resources/logback-spring.xml" />
+        <option value="$PROJECT_DIR$/cloud-auth/src/main/resources/logback-spring.xml" />
+        <option value="$PROJECT_DIR$/cloud-eureka/src/main/resources/logback-spring.xml" />
+        <option value="$PROJECT_DIR$/cloud-zuul/src/main/resources/logback-spring.xml" />
+        <option value="$PROJECT_DIR$/cloud-config/src/main/resources/application-prod.yml" />
+        <option value="$PROJECT_DIR$/cloud-config/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/cloud-config/src/main/resources/application-test.yml" />
+        <option value="$PROJECT_DIR$/cloud-eureka/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/config/DataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/config/MasterConfig.java" />
+        <option value="$PROJECT_DIR$/cloud-zipkin/src/main/resources/logback-spring.xml" />
+        <option value="$PROJECT_DIR$/cloud-auth/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/cloud-zipkin/src/test/java/com/cloud/zipkin/CloudZipkinApplicationTests.java" />
+        <option value="$PROJECT_DIR$/cloud-zipkin/src/main/java/com/cloud/zipkin/config/ResourceServerConfig.java" />
+        <option value="$PROJECT_DIR$/cloud-zipkin/src/main/java/com/cloud/zipkin/ResourceServerConfig.java" />
+        <option value="$PROJECT_DIR$/cloud-config/cloud-config-module/cloud-zipkin/cloud-zipkin-dev.yml" />
+        <option value="$PROJECT_DIR$/cloud-zipkin/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/cloud-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-zuul/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/cloud-config/cloud-config-module/cloud-basic/cloud-basic-dev.yml" />
+        <option value="$PROJECT_DIR$/cloud-config/cloud-config-module/cloud-auth/cloud-auth-dev.yml" />
+        <option value="$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/config/hystrixConfig.java" />
+        <option value="$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/config/RemoteTokenService.java" />
+        <option value="$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/config/HystrixConfiguration.java" />
+        <option value="$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/config/ResourceServerConfiguration.java" />
         <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/CloudBasicApplication.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/Exception/GlobalDefultExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/utils/Base64Util.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/utils/Sha1Util.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/utils/MD5Util.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/constant/SystemConstant.java" />
-        <option value="$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/utils/AesUtil.java" />
         <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/cloud-zipkin/src/main/java/com/cloud/zipkin/CloudZipkinApplication.java" />
+        <option value="$PROJECT_DIR$/cloud-zipkin/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/CloudAuthApplication.java" />
+        <option value="$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/config/SecurityConfiguration.java" />
+        <option value="$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/config/OAuth2ServerConfig.java" />
+        <option value="$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/controller/TestEndpoints.java" />
+        <option value="$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/service/BaseUserDetailService.java" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/cloud-config/cloud-config-module/cloud-zuul/cloud-zuul-dev.yml" />
+        <option value="$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/entity/SUserEntity.java" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/slave/entity/SUserEntity.java" />
+        <option value="$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/master/entity/SUserEntity.java" />
         <option value="$PROJECT_DIR$/cloud-parent/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-config/src/main/java/com/cloud/config/CloudConfigApplication.java" />
-        <option value="$PROJECT_DIR$/cloud-config/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-config/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -211,7 +268,17 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="cloud-basic" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="cloud-basic" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -221,10 +288,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="800" />
+    <option name="height" value="803" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -232,6 +299,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,25 +310,80 @@
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-auth" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-auth" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-basic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-basic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-basic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-basic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -268,91 +391,74 @@
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-basic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-basic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-basic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-              <item name="aspect" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-basic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-basic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-              <item name="constant" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-basic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
+              <item name="slave" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-basic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-              <item name="Exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-commons" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-commons" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
+              <item name="slave" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
@@ -363,6 +469,19 @@
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
               <item name="cloud-config" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-config-module" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-config" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-config-module" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-config" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -383,16 +502,25 @@
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-config" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-eureka" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-config" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-eureka" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-eureka" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-eureka" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -400,51 +528,12 @@
             <path>
               <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-eureka" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wl-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wl-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud-parent" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
@@ -458,6 +547,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="TokenEndpoint&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.endpoint.TokenEndpointAuthenticationFilter&#10;Transactional&#9;PSI&#9;JAVA://org.springframework.transaction.annotation.Transactional" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -466,28 +556,43 @@
     <property name="project.structure.proportion" value="0.15902779" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cloud-config/cloud-config-module/cloud-zipkin" />
+      <recent name="$PROJECT_DIR$/cloud-config" />
+      <recent name="$PROJECT_DIR$/cloud-zipkin/src/main/resources" />
+      <recent name="$PROJECT_DIR$/cloud-zipkin" />
+      <recent name="$PROJECT_DIR$/cloud-commons/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cloud.zipkin" />
+      <recent name="com.cloud.zipkin.config" />
+      <recent name="com.cloud.commons.bean" />
+      <recent name="com.cloud.commons" />
+      <recent name="com.cloud.zuul.config" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cloud-zuul" />
       <recent name="$PROJECT_DIR$/cloud-eureka" />
       <recent name="$PROJECT_DIR$/cloud-basic" />
       <recent name="$PROJECT_DIR$/cloud-auth" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.cloud.commons.bean" />
-      <recent name="com.cloud.commons" />
-      <recent name="com.cloud.zuul.config" />
-      <recent name="com.cloud.auth.config" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/cloud-commons/src/main/resources" />
-      <recent name="$PROJECT_DIR$/cloud-commons" />
-      <recent name="$PROJECT_DIR$/cloud-zuul" />
-      <recent name="$PROJECT_DIR$/cloud-eureka" />
-      <recent name="$PROJECT_DIR$/cloud-auth" />
-    </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 17 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 17 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="cloud-basic" type="c588b436:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -501,7 +606,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CloudBasicApplication">
+  <component name="RunManager" selected="Spring Boot.CloudZipkinApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -534,10 +639,31 @@
     <configuration name="CloudBasicApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cloud-basic" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cloud.basic.CloudBasicApplication" />
+      <RunnerSettings RunnerId="Debug with VisualVM">
+        <option name="visualVMId" value="23089969779374" />
+      </RunnerSettings>
+    </configuration>
+    <configuration name="CloudCommonsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-commons" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cloud.commons.CloudCommonsApplication" />
+    </configuration>
+    <configuration name="CloudConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cloud.config.CloudConfigApplication" />
     </configuration>
     <configuration name="CloudEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cloud-eureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cloud.eureka.CloudEurekaApplication" />
+    </configuration>
+    <configuration name="CloudZipkinApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-zipkin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cloud.zipkin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cloud.zipkin.CloudZipkinApplication" />
     </configuration>
     <configuration name="CloudZuulApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cloud-zuul" />
@@ -569,11 +695,15 @@
       <item itemvalue="Spring Boot.CloudBasicApplication" />
       <item itemvalue="Spring Boot.CloudEurekaApplication" />
       <item itemvalue="Spring Boot.CloudZuulApplication" />
+      <item itemvalue="Spring Boot.CloudCommonsApplication" />
+      <item itemvalue="Spring Boot.CloudConfigApplication" />
       <item itemvalue="Spring Boot.CloudAuthApplication" />
+      <item itemvalue="Spring Boot.CloudZipkinApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.CloudAuthApplication" />
+        <item itemvalue="Spring Boot.CloudZipkinApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -622,69 +752,44 @@
       <workItem from="1570694859917" duration="6231000" />
       <workItem from="1570702039830" duration="5835000" />
       <workItem from="1570756230225" duration="18124000" />
-    </task>
-    <task id="LOCAL-00001" summary="commit by wangliang">
-      <created>1569667073294</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1569667073295</updated>
-    </task>
-    <task id="LOCAL-00002" summary="commit by wangliang">
-      <created>1569815990105</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1569815990106</updated>
-    </task>
-    <task id="LOCAL-00003" summary="commit by wangliang">
-      <created>1569824396983</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1569824396983</updated>
-    </task>
-    <task id="LOCAL-00004" summary="commit by wangliang">
-      <created>1570704156517</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1570704156517</updated>
-    </task>
-    <task id="LOCAL-00005" summary="commit by wangliang">
-      <created>1570704208522</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1570704208522</updated>
-    </task>
-    <task id="LOCAL-00006" summary="commit by wangliang">
-      <created>1570707493548</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1570707493548</updated>
-    </task>
-    <task id="LOCAL-00007" summary="commit by wangliang">
-      <created>1570707570499</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1570707570499</updated>
-    </task>
-    <task id="LOCAL-00008" summary="commit by wangliang">
-      <created>1570766317832</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1570766317832</updated>
-    </task>
-    <task id="LOCAL-00009" summary="commit by wangliang">
-      <created>1570766448860</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1570766448860</updated>
+      <workItem from="1576763339096" duration="347000" />
+      <workItem from="1576804435866" duration="12250000" />
+      <workItem from="1576912990110" duration="53000" />
+      <workItem from="1576949730347" duration="51000" />
+      <workItem from="1576950093809" duration="798000" />
+      <workItem from="1577064311860" duration="6856000" />
+      <workItem from="1577148982846" duration="4621000" />
+      <workItem from="1577167875205" duration="9031000" />
+      <workItem from="1577235676509" duration="15020000" />
+      <workItem from="1577322356208" duration="1028000" />
+      <workItem from="1577339129440" duration="808000" />
+      <workItem from="1577357672359" duration="5000" />
+      <workItem from="1577503607020" duration="16000" />
+      <workItem from="1577504950375" duration="592000" />
+      <workItem from="1577668026758" duration="12182000" />
+      <workItem from="1577754148266" duration="12564000" />
+      <workItem from="1577928857095" duration="1264000" />
+      <workItem from="1577962808470" duration="1459000" />
+      <workItem from="1577964483310" duration="26000" />
+      <workItem from="1578014978082" duration="2795000" />
+      <workItem from="1578036121554" duration="735000" />
+      <workItem from="1578037638729" duration="1826000" />
+      <workItem from="1578272816196" duration="723000" />
+      <workItem from="1578306894385" duration="1227000" />
+      <workItem from="1578359389467" duration="1183000" />
+      <workItem from="1578445266001" duration="3494000" />
+      <workItem from="1578532877146" duration="1777000" />
+      <workItem from="1578541061531" duration="830000" />
+      <workItem from="1578619077627" duration="3860000" />
+      <workItem from="1578878115873" duration="2524000" />
+      <workItem from="1578963439883" duration="3180000" />
+      <workItem from="1579050783367" duration="4504000" />
+      <workItem from="1579136395475" duration="2362000" />
+      <workItem from="1579315139978" duration="867000" />
+      <workItem from="1579396521662" duration="1779000" />
+      <workItem from="1579482360668" duration="4423000" />
+      <workItem from="1579506939957" duration="3596000" />
+      <workItem from="1579569760812" duration="1643000" />
     </task>
     <task id="LOCAL-00010" summary="commit by wangliang">
       <created>1570775401533</created>
@@ -700,138 +805,435 @@
       <option name="project" value="LOCAL" />
       <updated>1574738097668</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="commit by wangliang">
+      <created>1576748796384</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1576748796384</updated>
+    </task>
+    <task id="LOCAL-00013" summary="加入多数据源动态切换">
+      <created>1576749232586</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1576749232586</updated>
+    </task>
+    <task id="LOCAL-00014" summary="commit by wangliang">
+      <created>1576820930272</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1576820930272</updated>
+    </task>
+    <task id="LOCAL-00015" summary="commit by wangliang">
+      <created>1576821010833</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1576821010833</updated>
+    </task>
+    <task id="LOCAL-00016" summary="commit by wangliang">
+      <created>1576821391068</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1576821391068</updated>
+    </task>
+    <task id="LOCAL-00017" summary="commit by wangliang">
+      <created>1576822891745</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1576822891745</updated>
+    </task>
+    <task id="LOCAL-00018" summary="commit by wangliang">
+      <created>1576823111058</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1576823111058</updated>
+    </task>
+    <task id="LOCAL-00019" summary="commit by wangliang">
+      <created>1576823215497</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1576823215497</updated>
+    </task>
+    <task id="LOCAL-00020" summary="commit by wangliang">
+      <created>1576823287292</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1576823287292</updated>
+    </task>
+    <task id="LOCAL-00021" summary="commit by wangliang">
+      <created>1576823523095</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1576823523095</updated>
+    </task>
+    <task id="LOCAL-00022" summary="commit by wangliang">
+      <created>1576832693745</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1576832693745</updated>
+    </task>
+    <task id="LOCAL-00023" summary="commit by wangliang">
+      <created>1576832972535</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1576832972535</updated>
+    </task>
+    <task id="LOCAL-00024" summary="commit by wangliang">
+      <created>1576833120532</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1576833120532</updated>
+    </task>
+    <task id="LOCAL-00025" summary="commit by wangliang">
+      <created>1576833289150</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1576833289150</updated>
+    </task>
+    <task id="LOCAL-00026" summary="commit by wangliang">
+      <created>1576833509632</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1576833509633</updated>
+    </task>
+    <task id="LOCAL-00027" summary="commit by wangliang">
+      <created>1576833772428</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1576833772428</updated>
+    </task>
+    <task id="LOCAL-00028" summary="commit by wangliang">
+      <created>1576833928675</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1576833928675</updated>
+    </task>
+    <task id="LOCAL-00029" summary="commit by wangliang">
+      <created>1576834141377</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1576834141377</updated>
+    </task>
+    <task id="LOCAL-00030" summary="commit by wangliang">
+      <created>1576834760308</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1576834760308</updated>
+    </task>
+    <task id="LOCAL-00031" summary="commit by wangliang">
+      <created>1576834978745</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1576834978745</updated>
+    </task>
+    <task id="LOCAL-00032" summary="commit by wangliang">
+      <created>1576835184129</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1576835184129</updated>
+    </task>
+    <task id="LOCAL-00033" summary="commit by wangliang">
+      <created>1576835306990</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1576835306991</updated>
+    </task>
+    <task id="LOCAL-00034" summary="commit by wangliang">
+      <created>1576835426106</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1576835426106</updated>
+    </task>
+    <task id="LOCAL-00035" summary="commit by wangliang">
+      <created>1576835698311</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1576835698311</updated>
+    </task>
+    <task id="LOCAL-00036" summary="commit by wangliang">
+      <created>1576835812838</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1576835812839</updated>
+    </task>
+    <task id="LOCAL-00037" summary="commit by wangliang">
+      <created>1576835873358</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1576835873358</updated>
+    </task>
+    <task id="LOCAL-00038" summary="commit by wangliang">
+      <created>1577088826745</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1577088826745</updated>
+    </task>
+    <task id="LOCAL-00039" summary="commit by wangliang">
+      <created>1577089138524</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1577089138524</updated>
+    </task>
+    <task id="LOCAL-00040" summary="commit by wangliang">
+      <created>1577089230913</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1577089230913</updated>
+    </task>
+    <task id="LOCAL-00041" summary="commit by wangliang">
+      <created>1577090037556</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1577090037556</updated>
+    </task>
+    <task id="LOCAL-00042" summary="commit by wangliang">
+      <created>1577090109004</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1577090109004</updated>
+    </task>
+    <task id="LOCAL-00043" summary="commit by wangliang">
+      <created>1577090472156</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1577090472156</updated>
+    </task>
+    <task id="LOCAL-00044" summary="druid密码加密配置">
+      <created>1577091077200</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1577091077200</updated>
+    </task>
+    <task id="LOCAL-00045" summary="commit by wangliang">
+      <created>1577253823185</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1577253823185</updated>
+    </task>
+    <task id="LOCAL-00046" summary="commit by wangliang">
+      <created>1577254241258</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1577254241258</updated>
+    </task>
+    <task id="LOCAL-00047" summary="commit by wangliang">
+      <created>1577254270451</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1577254270451</updated>
+    </task>
+    <task id="LOCAL-00048" summary="commit by wangliang">
+      <created>1577254786757</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1577254786757</updated>
+    </task>
+    <task id="LOCAL-00049" summary="commit by wangliang">
+      <created>1577255135626</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1577255135626</updated>
+    </task>
+    <task id="LOCAL-00050" summary="commit by wangliang">
+      <created>1577255939431</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1577255939438</updated>
+    </task>
+    <task id="LOCAL-00051" summary="commit by wangliang">
+      <created>1577257941566</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1577257941566</updated>
+    </task>
+    <task id="LOCAL-00052" summary="commit by wangliang">
+      <created>1577259147383</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1577259147383</updated>
+    </task>
+    <task id="LOCAL-00053" summary="commit by wangliang">
+      <created>1577259277096</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1577259277096</updated>
+    </task>
+    <task id="LOCAL-00054" summary="commit by wangliang">
+      <created>1577259416572</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1577259416572</updated>
+    </task>
+    <task id="LOCAL-00055" summary="commit by wangliang">
+      <created>1577261660667</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1577261660667</updated>
+    </task>
+    <task id="LOCAL-00056" summary="commit by wangliang">
+      <created>1577261691715</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1577261691715</updated>
+    </task>
+    <task id="LOCAL-00057" summary="commit by wangliang">
+      <created>1577762902687</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1577762902688</updated>
+    </task>
+    <task id="LOCAL-00058" summary="commit by wangliang">
+      <created>1579506097300</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1579506097301</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114995000" />
+    <option name="totallyTimeSpent" value="251677000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="803" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="803" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="9" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="11" weight="0.329927" />
-      <window_info anchor="right" id="RestServices" order="7" weight="0.3299712" />
+      <window_info anchor="right" id="Palette" order="10" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="21" weight="0.329927" />
+      <window_info anchor="right" id="RestServices" order="8" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32896653" />
       <window_info anchor="right" id="Redis Servers" order="0" show_stripe_button="false" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32708934" />
-      <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="right" id="Mongo Explorer" order="2" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32853025" />
+      <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="0" />
-      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="4" weight="0.3299712" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="5" weight="0.3299712" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="11" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="12" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="16" weight="0.46569344" />
-      <window_info anchor="bottom" id="TODO" order="19" />
-      <window_info active="true" anchor="bottom" id="Messages" order="20" visible="true" weight="0.3270073" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="bottom" id="Debug" order="15" weight="0.47445256" />
+      <window_info anchor="bottom" id="TODO" order="18" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="1" />
-      <window_info anchor="bottom" id="Java Enterprise" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="bottom" id="Run" order="15" weight="0.4882698" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.329927" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="bottom" id="Run" order="14" weight="0.48759124" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.329927" />
       <window_info anchor="bottom" id="Spring" order="9" />
       <window_info anchor="bottom" id="CheckStyle" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.3270073" />
-      <window_info anchor="bottom" id="Run with VisualVM" order="5" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49927008" visible="true" weight="0.3090778" />
-      <window_info anchor="right" id="Bean Validation" order="8" />
-      <window_info id="Web" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="JProfiler" order="7" />
-      <window_info anchor="bottom" id="Find" order="14" weight="0.32844576" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info id="Favorites" order="3" sideWeight="0.5007299" side_tool="true" weight="0.3090778" />
-      <window_info anchor="bottom" id="Debug with VisualVM" order="10" />
-      <window_info anchor="bottom" id="Spring" order="9" />
-      <window_info anchor="right" id="Redis Servers" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="15" weight="0.4882698" />
-      <window_info anchor="right" id="Database" order="4" weight="0.3299712" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32844576" />
-      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.25792506" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Palette" order="9" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="19" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="12" weight="0.25" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.3299712" />
-      <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32991204" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="bottom" id="Debug with VisualVM" order="10" />
-      <window_info anchor="bottom" id="Message" order="13" />
-      <window_info anchor="right" id="Ant Build" order="11" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info id="Image Layers" order="1" />
-      <window_info anchor="bottom" id="Thumbnails" order="21" weight="0.329927" />
-      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32896653" />
-      <window_info anchor="bottom" id="Cvs" order="17" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="18" weight="0.4" />
-      <window_info id="Designer" order="0" />
-      <window_info anchor="right" id="Mongo Explorer" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="CheckStyle" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="4" />
+      <window_info anchor="bottom" id="Run with VisualVM" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.47694525" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="4" side_tool="true" />
-      <window_info anchor="right" id="Bean Validation" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Run with VisualVM" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="10" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="JProfiler" order="7" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="Messages" order="20" weight="0.32844576" />
-      <window_info active="true" anchor="bottom" id="Debug" order="16" visible="true" weight="0.48387095" />
-      <window_info anchor="right" id="RestServices" order="7" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="11" />
+      <window_info anchor="bottom" id="JProfiler" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug with VisualVM" order="10" />
+      <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32991204" />
+      <window_info anchor="bottom" id="Inspection" order="17" weight="0.4" />
+      <window_info anchor="right" x="0" y="0" width="310" height="603" id="Documentation" order="1" sideWeight="0.5041783" side_tool="true" weight="0.3299712" />
+      <window_info anchor="bottom" id="Cvs" order="16" weight="0.25" />
+      <window_info anchor="bottom" id="Thumbnails" order="20" weight="0.329927" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="13" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="19" weight="0.3270073" />
+      <window_info anchor="bottom" id="Find" order="13" weight="0.32844576" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="11" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="12" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="11" />
+      <window_info anchor="bottom" id="Thumbnails" order="20" weight="0.329927" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="21" weight="0.329927" />
       <window_info id="Designer" order="0" />
-      <window_info anchor="right" id="Palette" order="9" />
+      <window_info anchor="right" x="0" y="0" width="310" height="603" id="Documentation" order="1" sideWeight="0.5041783" side_tool="true" weight="0.3299712" />
+      <window_info anchor="right" id="Palette" order="10" />
       <window_info anchor="bottom" id="Spring" order="9" />
       <window_info id="Image Layers" order="1" />
-      <window_info anchor="bottom" id="Run" order="15" weight="0.4882698" />
-      <window_info anchor="bottom" id="Cvs" order="17" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="14" weight="0.4882698" />
+      <window_info anchor="bottom" id="Cvs" order="16" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="12" weight="0.25" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="UI Designer" order="2" />
+      <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32844576" />
-      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32991204" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="10" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="11" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="CheckStyle" order="3" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32896653" />
-      <window_info anchor="bottom" id="TODO" order="19" />
-      <window_info anchor="right" id="Mongo Explorer" order="2" show_stripe_button="false" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="12" weight="0.25" />
-      <window_info anchor="right" id="Database" order="4" weight="0.3299712" />
-      <window_info anchor="bottom" id="Run with VisualVM" order="5" />
-      <window_info anchor="bottom" id="Java Enterprise" order="4" />
-      <window_info anchor="bottom" id="JProfiler" order="7" />
-      <window_info anchor="right" id="RestServices" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.3299712" />
+      <window_info anchor="bottom" id="Messages" order="19" weight="0.3270073" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" show_stripe_button="false" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="13" weight="0.25" />
+      <window_info anchor="bottom" id="Run with VisualVM" order="4" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.329927" />
+      <window_info anchor="bottom" id="JProfiler" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.329927" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32853025" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.25792506" />
-      <window_info anchor="bottom" id="Messages" order="20" weight="0.32844576" />
-      <window_info anchor="bottom" id="Message" order="13" />
-      <window_info anchor="bottom" id="Debug with VisualVM" order="10" />
-      <window_info id="Web" order="4" side_tool="true" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Redis Servers" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection" order="18" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="14" weight="0.32844576" />
-      <window_info anchor="right" id="Bean Validation" order="8" />
-      <window_info active="true" anchor="bottom" id="Debug" order="16" visible="true" weight="0.48387095" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.32348704" />
+      <window_info anchor="right" id="Database" order="5" weight="0.3299712" />
+      <window_info anchor="bottom" id="Message" order="12" />
+      <window_info anchor="bottom" id="Debug with VisualVM" order="10" />
+      <window_info anchor="bottom" id="TODO" order="18" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="RestServices" order="8" />
+      <window_info anchor="bottom" id="Inspection" order="17" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="13" weight="0.32844576" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="bottom" id="Debug" order="15" weight="0.47445256" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -851,6 +1253,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="加入多数据源动态切换" />
+    <MESSAGE value="druid密码加密配置" />
     <MESSAGE value="commit by wangliang" />
     <option name="LAST_COMMIT_MESSAGE" value="commit by wangliang" />
   </component>
@@ -869,377 +1273,398 @@
           <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/software/apache-maven-3.5.0/repository/com/alibaba/druid/1.1.16/druid-1.1.16.jar!/com/alibaba/druid/pool/DruidDataSource.class</url>
+          <line>3292</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/controller/TestEndpoints.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/service/BaseUserDetailService.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/master/entity/SUserEntity.java</url>
+          <line>7</line>
+          <properties />
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="51" />
+      <option name="time" value="97" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/enums/SexEnum.java">
+    <entry file="file://$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/config/ExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/config/SwaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/dao/SUserRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/entity/SUserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/provider/FeignBasicService.java" />
-    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/service/SUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/service/impl/SUserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/filter/ZuulTokenFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="71" column="1" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/config/HystrixConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.24/tomcat-embed-core-9.0.24.jar!/org/apache/catalina/core/StandardEngineValve.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-basic/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="914" column="18" selection-start-line="914" selection-start-column="18" selection-end-line="914" selection-end-column="18" />
+        <state relative-caret-position="171">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/config/hystrixConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" column="109" selection-start-line="8" selection-start-column="109" selection-end-line="8" selection-end-column="109" />
+        <state relative-caret-position="266">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/hystrix/ApiFallbackProvider.java">
+    <entry file="file://$PROJECT_DIR$/cloud-zuul/src/main/java/com/cloud/zuul/config/FilterUrlsConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="10" />
+        <state relative-caret-position="266">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/utils/Result.java" />
-    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/CloudBasicApplication.java">
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/spring-security-core/5.1.6.RELEASE/spring-security-core-5.1.6.RELEASE.jar!/org/springframework/security/access/intercept/AbstractSecurityInterceptor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="104">
+          <caret line="110" column="70" selection-start-line="110" selection-start-column="70" selection-end-line="110" selection-end-column="70" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/resources/logback-spring.xml">
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/spring-security-core/5.1.6.RELEASE/spring-security-core-5.1.6.RELEASE.jar!/org/springframework/security/access/vote/AffirmativeBased.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="56" column="25" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="25" />
+        <state relative-caret-position="86">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/resources/logback-spring.xml" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/BASE64Encoder.class">
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/spring-security-core/5.1.6.RELEASE/spring-security-core-5.1.6.RELEASE.jar!/org/springframework/security/access/prepost/PreAuthorize.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        <state relative-caret-position="160">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/BASE64Decoder.class">
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/spring-security-core/5.1.6.RELEASE/spring-security-core-5.1.6.RELEASE.jar!/org/springframework/security/access/expression/SecurityExpressionRoot.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/CharacterDecoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/utils/MD5Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Base64.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-47">
-          <caret line="547" column="22" selection-start-line="547" selection-start-column="22" selection-end-line="547" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/utils/Sha1Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/utils/Base64Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/utils/AesUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
-          <folding>
-            <element signature="e#2080#2081#0" expanded="true" />
-            <element signature="e#2107#2108#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-eureka/src/main/java/com/cloud/eureka/CloudEurekaApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-basic/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="81" column="10" selection-start-line="14" selection-start-column="4" selection-end-line="81" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-parent/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="179" column="21" selection-start-line="179" selection-start-column="21" selection-end-line="179" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-eureka/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-eureka/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-config/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-config/src/main/java/com/cloud/config/CloudConfigApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-auth/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-zuul/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" selection-start-line="25" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="71" selection-start-line="71" selection-end-line="74" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-config/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/Exception/utils/GlobalDefultExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/config/SpringContextHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/system/SpringContextHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/bean/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/system/StartRunning.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/enums/ExceptionResultEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/constant/SystemConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/Exception/BusinessException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/CloudBasicApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        <state relative-caret-position="110">
+          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/utils/ResultUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        <state relative-caret-position="207">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/feign/UserFeignService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/spring-security-core/5.1.6.RELEASE/spring-security-core-5.1.6.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetailsService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/spring-security-core/5.1.6.RELEASE/spring-security-core-5.1.6.RELEASE.jar!/org/springframework/security/core/userdetails/User.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE.jar!/org/springframework/security/oauth2/provider/endpoint/TokenEndpointAuthenticationFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/spring-security-core/5.1.6.RELEASE/spring-security-core-5.1.6.RELEASE.jar!/org/springframework/security/authentication/dao/AbstractUserDetailsAuthenticationProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/spring-security-core/5.1.6.RELEASE/spring-security-core-5.1.6.RELEASE.jar!/org/springframework/security/authentication/ProviderManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/spring-security-config/5.1.6.RELEASE/spring-security-config-5.1.6.RELEASE.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="306" selection-start-line="306" selection-end-line="306" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE.jar!/org/springframework/security/oauth2/provider/password/ResourceOwnerPasswordTokenGranter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE.jar!/org/springframework/security/oauth2/provider/token/AbstractTokenGranter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="111" column="27" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE.jar!/org/springframework/security/oauth2/provider/endpoint/TokenEndpoint.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="167" selection-start-line="167" selection-end-line="167" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/config/SecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="4666" column="31" selection-start-line="4666" selection-start-column="19" selection-end-line="4666" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/spring-security-core/5.1.6.RELEASE/spring-security-core-5.1.6.RELEASE.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/spring-security-config/5.1.6.RELEASE/spring-security-config-5.1.6.RELEASE.jar!/org/springframework/security/config/annotation/web/configurers/SessionManagementConfigurer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="91" column="42" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/org/springframework/security/spring-security-config/5.1.6.RELEASE/spring-security-config-5.1.6.RELEASE.jar!/org/springframework/security/config/annotation/SecurityConfigurerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/config/OAuth2ServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="97" column="62" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/feign/fallback/UserFeignServiceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/service/BaseUserDetailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-commons/src/main/java/com/cloud/commons/Exception/GlobalDefultExceptionHandler.java">
+    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/config/SwaggerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        <state relative-caret-position="247">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/CloudBasicApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-basic/src/test/java/com/cloud/basic/CloudCommonsApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-eureka/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/service/impl/SUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/service/SUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-config/cloud-config-module/cloud-zuul/cloud-zuul-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2945">
+          <caret line="155" column="8" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/controller/indexRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/enums/SexEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1007">
+          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/software/apache-maven-3.5.0/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar!/javax/persistence/Entity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-config/cloud-config-module/cloud-basic/cloud-basic-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="120" selection-start-line="120" selection-end-line="123" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-config/cloud-config-module/cloud-auth/cloud-auth-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" selection-start-line="33" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-basic/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/master/dao/MasterSUserRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/controller/indexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/controller/TestEndpoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/controller/indexRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/controller/indexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/master/entity/SUserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="51" column="55" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-basic/src/main/java/com/cloud/basic/slave/entity/SUserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-auth/src/main/java/com/cloud/auth/entity/SUserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-parent/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1306,12 +1731,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>cloud-basic</last-edited>
+          <last-edited>cloud-auth</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

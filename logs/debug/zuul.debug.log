@@ -1,486 +1,330 @@
-2019-10-11 09:29:13.344| main | INFO |  -  | Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$1b7ce5f5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) | [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330]
-2019-10-11 09:29:13.731| main | INFO |  -  | No active profile set, falling back to default profiles: default | [org.springframework.boot.SpringApplication:648]
-2019-10-11 09:29:15.382| main | INFO |  -  | Bootstrapping Spring Data repositories in DEFAULT mode. | [org.springframework.data.repository.config.RepositoryConfigurationDelegate:126]
-2019-10-11 09:29:15.456| main | INFO |  -  | Finished Spring Data repository scanning in 43ms. Found 0 repository interfaces. | [org.springframework.data.repository.config.RepositoryConfigurationDelegate:182]
-2019-10-11 09:29:15.693| main | WARN |  -  | Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format. | [org.springframework.boot.actuate.endpoint.EndpointId:131]
-2019-10-11 09:29:15.720| main | WARN |  -  | Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format. | [org.springframework.boot.actuate.endpoint.EndpointId:131]
-2019-10-11 09:29:16.254| main | INFO |  -  | BeanFactory id=ae2af48e-bbf7-3c16-a453-56f1810f0b80 | [org.springframework.cloud.context.scope.GenericScope:295]
-2019-10-11 09:29:16.512| main | INFO |  -  | Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff62e2f8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) | [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330]
-2019-10-11 09:29:16.914| main | INFO |  -  | Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$1b7ce5f5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) | [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330]
-2019-10-11 09:29:17.585| main | INFO |  -  | Tomcat initialized with port(s): 8113 (http) | [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90]
-2019-10-11 09:29:17.608| main | INFO |  -  | Initializing ProtocolHandler ["http-nio-8113"] | [org.apache.juli.logging.DirectJDKLog:173]
-2019-10-11 09:29:17.626| main | INFO |  -  | Starting service [Tomcat] | [org.apache.juli.logging.DirectJDKLog:173]
-2019-10-11 09:29:17.627| main | INFO |  -  | Starting Servlet engine: [Apache Tomcat/9.0.24] | [org.apache.juli.logging.DirectJDKLog:173]
-2019-10-11 09:29:17.872| main | INFO |  -  | Initializing Spring embedded WebApplicationContext | [org.apache.juli.logging.DirectJDKLog:173]
-2019-10-11 09:29:17.873| main | INFO |  -  | Root WebApplicationContext: initialization completed in 4115 ms | [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:284]
-2019-10-11 09:29:17.893| main | WARN |  -  | No URLs will be polled as dynamic configuration sources. | [com.netflix.config.sources.URLConfigurationSource:121]
-2019-10-11 09:29:17.894| main | INFO |  -  | To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath. | [com.netflix.config.sources.URLConfigurationSource:122]
-2019-10-11 09:29:17.901| main | INFO |  -  | DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@5980fa73 | [com.netflix.config.DynamicPropertyFactory:281]
-2019-10-11 09:29:19.618| main | INFO |  -  | HikariPool-1 - Starting... | [com.zaxxer.hikari.HikariDataSource:110]
-2019-10-11 09:29:19.622| main | WARN |  -  | Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation. | [com.zaxxer.hikari.util.DriverDataSource:68]
-2019-10-11 09:29:19.947| main | INFO |  -  | HikariPool-1 - Start completed. | [com.zaxxer.hikari.HikariDataSource:123]
-2019-10-11 09:29:20.069| main | INFO |  -  | HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...] | [org.hibernate.jpa.internal.util.LogHelper:31]
-2019-10-11 09:29:20.316| main | INFO |  -  | HHH000412: Hibernate Core {5.3.11.Final} | [org.hibernate.Version:46]
-2019-10-11 09:29:20.320| main | INFO |  -  | HHH000206: hibernate.properties not found | [org.hibernate.cfg.Environment:213]
-2019-10-11 09:29:20.902| main | INFO |  -  | HCANN000001: Hibernate Commons Annotations {5.0.4.Final} | [org.hibernate.annotations.common.reflection.java.JavaReflectionManager:49]
-2019-10-11 09:29:21.030| main | DEBUG |  -  | Adding type registration boolean -> org.hibernate.type.BooleanType@57515944 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.030| main | DEBUG |  -  | Adding type registration boolean -> org.hibernate.type.BooleanType@57515944 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.031| main | DEBUG |  -  | Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@57515944 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.033| main | DEBUG |  -  | Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@5e9ea380 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.035| main | DEBUG |  -  | Adding type registration true_false -> org.hibernate.type.TrueFalseType@785d6a98 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.037| main | DEBUG |  -  | Adding type registration yes_no -> org.hibernate.type.YesNoType@e171f93 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.044| main | DEBUG |  -  | Adding type registration byte -> org.hibernate.type.ByteType@77a4bac | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.045| main | DEBUG |  -  | Adding type registration byte -> org.hibernate.type.ByteType@77a4bac | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.045| main | DEBUG |  -  | Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@77a4bac | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.049| main | DEBUG |  -  | Adding type registration character -> org.hibernate.type.CharacterType@3595086b | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.050| main | DEBUG |  -  | Adding type registration char -> org.hibernate.type.CharacterType@3595086b | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.050| main | DEBUG |  -  | Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@3595086b | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.054| main | DEBUG |  -  | Adding type registration short -> org.hibernate.type.ShortType@72e49f6a | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.054| main | DEBUG |  -  | Adding type registration short -> org.hibernate.type.ShortType@72e49f6a | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.054| main | DEBUG |  -  | Adding type registration java.lang.Short -> org.hibernate.type.ShortType@72e49f6a | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.058| main | DEBUG |  -  | Adding type registration integer -> org.hibernate.type.IntegerType@45d38165 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.058| main | DEBUG |  -  | Adding type registration int -> org.hibernate.type.IntegerType@45d38165 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.058| main | DEBUG |  -  | Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@45d38165 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.060| main | DEBUG |  -  | Adding type registration long -> org.hibernate.type.LongType@96be1ae | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.061| main | DEBUG |  -  | Adding type registration long -> org.hibernate.type.LongType@96be1ae | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.061| main | DEBUG |  -  | Adding type registration java.lang.Long -> org.hibernate.type.LongType@96be1ae | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.065| main | DEBUG |  -  | Adding type registration float -> org.hibernate.type.FloatType@39ead1b7 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.065| main | DEBUG |  -  | Adding type registration float -> org.hibernate.type.FloatType@39ead1b7 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.066| main | DEBUG |  -  | Adding type registration java.lang.Float -> org.hibernate.type.FloatType@39ead1b7 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.070| main | DEBUG |  -  | Adding type registration double -> org.hibernate.type.DoubleType@662713b6 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.071| main | DEBUG |  -  | Adding type registration double -> org.hibernate.type.DoubleType@662713b6 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.071| main | DEBUG |  -  | Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@662713b6 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.073| main | DEBUG |  -  | Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@3265995e | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.074| main | DEBUG |  -  | Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@3265995e | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.077| main | DEBUG |  -  | Adding type registration big_integer -> org.hibernate.type.BigIntegerType@424a152f | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.077| main | DEBUG |  -  | Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@424a152f | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.079| main | DEBUG |  -  | Adding type registration string -> org.hibernate.type.StringType@2792c28 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.079| main | DEBUG |  -  | Adding type registration java.lang.String -> org.hibernate.type.StringType@2792c28 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.080| main | DEBUG |  -  | Adding type registration nstring -> org.hibernate.type.StringNVarcharType@11582db6 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.082| main | DEBUG |  -  | Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@558127d2 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.087| main | DEBUG |  -  | Adding type registration url -> org.hibernate.type.UrlType@4e3ee457 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.088| main | DEBUG |  -  | Adding type registration java.net.URL -> org.hibernate.type.UrlType@4e3ee457 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.089| main | DEBUG |  -  | Adding type registration Duration -> org.hibernate.type.DurationType@1d5bb5c | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.090| main | DEBUG |  -  | Adding type registration java.time.Duration -> org.hibernate.type.DurationType@1d5bb5c | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.093| main | DEBUG |  -  | Adding type registration Instant -> org.hibernate.type.InstantType@2133b712 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.094| main | DEBUG |  -  | Adding type registration java.time.Instant -> org.hibernate.type.InstantType@2133b712 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.095| main | DEBUG |  -  | Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@51fb5fe6 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.096| main | DEBUG |  -  | Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@51fb5fe6 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.099| main | DEBUG |  -  | Adding type registration LocalDate -> org.hibernate.type.LocalDateType@227b9277 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.099| main | DEBUG |  -  | Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@227b9277 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.101| main | DEBUG |  -  | Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@4ebd8d2 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.101| main | DEBUG |  -  | Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@4ebd8d2 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.103| main | DEBUG |  -  | Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7e9a836 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.103| main | DEBUG |  -  | Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7e9a836 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.106| main | DEBUG |  -  | Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@3a69014e | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.107| main | DEBUG |  -  | Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@3a69014e | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.111| main | DEBUG |  -  | Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@16e4db59 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.112| main | DEBUG |  -  | Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@16e4db59 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.116| main | DEBUG |  -  | Adding type registration date -> org.hibernate.type.DateType@4a6facb0 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.117| main | DEBUG |  -  | Adding type registration java.sql.Date -> org.hibernate.type.DateType@4a6facb0 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.120| main | DEBUG |  -  | Adding type registration time -> org.hibernate.type.TimeType@57b3d869 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.121| main | DEBUG |  -  | Adding type registration java.sql.Time -> org.hibernate.type.TimeType@57b3d869 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.125| main | DEBUG |  -  | Adding type registration timestamp -> org.hibernate.type.TimestampType@499c4d61 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.125| main | DEBUG |  -  | Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@499c4d61 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.126| main | DEBUG |  -  | Adding type registration java.util.Date -> org.hibernate.type.TimestampType@499c4d61 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.130| main | DEBUG |  -  | Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@2a510e0e | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.134| main | DEBUG |  -  | Adding type registration calendar -> org.hibernate.type.CalendarType@6eded11a | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.135| main | DEBUG |  -  | Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@6eded11a | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.135| main | DEBUG |  -  | Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@6eded11a | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.138| main | DEBUG |  -  | Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@50e8ed74 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.142| main | DEBUG |  -  | Adding type registration locale -> org.hibernate.type.LocaleType@45832b85 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.142| main | DEBUG |  -  | Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@45832b85 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.145| main | DEBUG |  -  | Adding type registration currency -> org.hibernate.type.CurrencyType@b81938d | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.145| main | DEBUG |  -  | Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@b81938d | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.152| main | DEBUG |  -  | Adding type registration timezone -> org.hibernate.type.TimeZoneType@bea5941 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.153| main | DEBUG |  -  | Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@bea5941 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.157| main | DEBUG |  -  | Adding type registration class -> org.hibernate.type.ClassType@4ac0ed65 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.158| main | DEBUG |  -  | Adding type registration java.lang.Class -> org.hibernate.type.ClassType@4ac0ed65 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.161| main | DEBUG |  -  | Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@d190639 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.161| main | DEBUG |  -  | Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@d190639 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.163| main | DEBUG |  -  | Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@1f85904a | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.170| main | DEBUG |  -  | Adding type registration binary -> org.hibernate.type.BinaryType@543d2ef3 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.170| main | DEBUG |  -  | Adding type registration byte[] -> org.hibernate.type.BinaryType@543d2ef3 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.171| main | DEBUG |  -  | Adding type registration [B -> org.hibernate.type.BinaryType@543d2ef3 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.173| main | DEBUG |  -  | Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@34f48d1 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.173| main | DEBUG |  -  | Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@34f48d1 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.173| main | DEBUG |  -  | Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@34f48d1 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.175| main | DEBUG |  -  | Adding type registration row_version -> org.hibernate.type.RowVersionType@18887028 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.177| main | DEBUG |  -  | Adding type registration image -> org.hibernate.type.ImageType@5ffd35dd | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.182| main | DEBUG |  -  | Adding type registration characters -> org.hibernate.type.CharArrayType@114b2414 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.182| main | DEBUG |  -  | Adding type registration char[] -> org.hibernate.type.CharArrayType@114b2414 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.183| main | DEBUG |  -  | Adding type registration [C -> org.hibernate.type.CharArrayType@114b2414 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.184| main | DEBUG |  -  | Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@5d5cd210 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.185| main | DEBUG |  -  | Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@5d5cd210 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.185| main | DEBUG |  -  | Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@5d5cd210 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.186| main | DEBUG |  -  | Adding type registration text -> org.hibernate.type.TextType@4e20a985 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.187| main | DEBUG |  -  | Adding type registration ntext -> org.hibernate.type.NTextType@6706da3d | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.191| main | DEBUG |  -  | Adding type registration blob -> org.hibernate.type.BlobType@69d021c1 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.191| main | DEBUG |  -  | Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@69d021c1 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.192| main | DEBUG |  -  | Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@785ef70f | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.196| main | DEBUG |  -  | Adding type registration clob -> org.hibernate.type.ClobType@4d0abb23 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.197| main | DEBUG |  -  | Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@4d0abb23 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.201| main | DEBUG |  -  | Adding type registration nclob -> org.hibernate.type.NClobType@7b7e4b20 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.201| main | DEBUG |  -  | Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@7b7e4b20 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.202| main | DEBUG |  -  | Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@68f79b7c | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.204| main | DEBUG |  -  | Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@5c13af01 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.210| main | DEBUG |  -  | Adding type registration serializable -> org.hibernate.type.SerializableType@1f19d423 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.216| main | DEBUG |  -  | Adding type registration object -> org.hibernate.type.ObjectType@6f17dd06 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.218| main | DEBUG |  -  | Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@6f17dd06 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.220| main | DEBUG |  -  | Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@1534bdc6 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.220| main | DEBUG |  -  | Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@53079ae6 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.221| main | DEBUG |  -  | Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@718ad3a6 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.222| main | DEBUG |  -  | Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@603c2dee | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.222| main | DEBUG |  -  | Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@50d666a2 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.222| main | DEBUG |  -  | Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@3f6906f4 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.222| main | DEBUG |  -  | Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1859e55c | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.223| main | DEBUG |  -  | Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@190bf8e4 | [org.hibernate.type.BasicTypeRegistry:156]
-2019-10-11 09:29:21.441| main | INFO |  -  | HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect | [org.hibernate.dialect.Dialect:157]
-2019-10-11 09:29:21.571| main | DEBUG |  -  | Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@62de20d3] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@6109d880] | [org.hibernate.type.spi.TypeConfiguration:142]
-2019-10-11 09:29:21.901| main | DEBUG |  -  | Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@62de20d3] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@62c6db99] | [org.hibernate.type.spi.TypeConfiguration:147]
-2019-10-11 09:29:21.966| main | INFO |  -  | Initialized JPA EntityManagerFactory for persistence unit 'default' | [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:415]
-2019-10-11 09:29:22.234| main | WARN |  -  | No URLs will be polled as dynamic configuration sources. | [com.netflix.config.sources.URLConfigurationSource:121]
-2019-10-11 09:29:22.234| main | INFO |  -  | To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath. | [com.netflix.config.sources.URLConfigurationSource:122]
-2019-10-11 09:29:22.839| main | INFO |  -  | Initializing ExecutorService 'applicationTaskExecutor' | [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:171]
-2019-10-11 09:29:22.943| main | WARN |  -  | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning | [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:226]
-2019-10-11 09:29:24.433| main | INFO |  -  | Starting filter initializer | [org.springframework.cloud.netflix.zuul.ZuulFilterInitializer:67]
-2019-10-11 09:29:24.487| main | INFO |  -  | Exposing 2 endpoint(s) beneath base path '/actuator' | [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:58]
-2019-10-11 09:29:24.674| main | INFO |  -  | Setting initial instance status as: STARTING | [org.springframework.cloud.netflix.eureka.InstanceInfoFactory:72]
-2019-10-11 09:29:25.065| main | INFO |  -  | Initializing Eureka in region us-east-1 | [com.netflix.discovery.DiscoveryClient:365]
-2019-10-11 09:29:25.221| main | INFO |  -  | Using JSON encoding codec LegacyJacksonJson | [com.netflix.discovery.provider.DiscoveryJerseyProvider:70]
-2019-10-11 09:29:25.222| main | INFO |  -  | Using JSON decoding codec LegacyJacksonJson | [com.netflix.discovery.provider.DiscoveryJerseyProvider:71]
-2019-10-11 09:29:25.466| main | INFO |  -  | Using XML encoding codec XStreamXml | [com.netflix.discovery.provider.DiscoveryJerseyProvider:80]
-2019-10-11 09:29:25.467| main | INFO |  -  | Using XML decoding codec XStreamXml | [com.netflix.discovery.provider.DiscoveryJerseyProvider:81]
-2019-10-11 09:29:25.842| main | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 09:29:25.875| main | INFO |  -  | Disable delta property : false | [com.netflix.discovery.DiscoveryClient:976]
-2019-10-11 09:29:25.875| main | INFO |  -  | Single vip registry refresh property : null | [com.netflix.discovery.DiscoveryClient:977]
-2019-10-11 09:29:25.876| main | INFO |  -  | Force full registry fetch : false | [com.netflix.discovery.DiscoveryClient:978]
-2019-10-11 09:29:25.877| main | INFO |  -  | Application is null : false | [com.netflix.discovery.DiscoveryClient:979]
-2019-10-11 09:29:25.877| main | INFO |  -  | Registered Applications size is zero : true | [com.netflix.discovery.DiscoveryClient:980]
-2019-10-11 09:29:25.877| main | INFO |  -  | Application version is -1: true | [com.netflix.discovery.DiscoveryClient:982]
-2019-10-11 09:29:25.877| main | INFO |  -  | Getting all instance registry info from the eureka server | [com.netflix.discovery.DiscoveryClient:1065]
-2019-10-11 09:29:26.270| main | INFO |  -  | The response status is 200 | [com.netflix.discovery.DiscoveryClient:1074]
-2019-10-11 09:29:26.273| main | INFO |  -  | Starting heartbeat executor: renew interval is: 30 | [com.netflix.discovery.DiscoveryClient:1288]
-2019-10-11 09:29:26.279| main | INFO |  -  | InstanceInfoReplicator onDemand update allowed rate per min is 4 | [com.netflix.discovery.InstanceInfoReplicator:60]
-2019-10-11 09:29:26.285| main | INFO |  -  | Discovery Client initialized at timestamp 1570757366282 with initial instances count: 0 | [com.netflix.discovery.DiscoveryClient:465]
-2019-10-11 09:29:26.290| main | INFO |  -  | Registering application ZUUL with eureka with status UP | [org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:41]
-2019-10-11 09:29:26.292| main | INFO |  -  | Saw local status change event StatusChangeEvent [timestamp=1570757366292, current=UP, previous=STARTING] | [com.netflix.discovery.DiscoveryClient$3:1323]
-2019-10-11 09:29:26.297| DiscoveryClient-InstanceInfoReplicator-0 | INFO |  -  | DiscoveryClient_ZUUL/192.168.10.206:zuul:8113: registering service... | [com.netflix.discovery.DiscoveryClient:844]
-2019-10-11 09:29:26.346| main | INFO |  -  | Starting ProtocolHandler ["http-nio-8113"] | [org.apache.juli.logging.DirectJDKLog:173]
-2019-10-11 09:29:26.438| main | INFO |  -  | Tomcat started on port(s): 8113 (http) with context path '' | [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:202]
-2019-10-11 09:29:26.440| main | INFO |  -  | Updating port to 8113 | [org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration:145]
-2019-10-11 09:29:26.445| main | INFO |  -  | Started CloudZuulApplication in 15.736 seconds (JVM running for 18.192) | [org.springframework.boot.StartupInfoLogger:59]
-2019-10-11 09:29:26.762| DiscoveryClient-InstanceInfoReplicator-0 | INFO |  -  | DiscoveryClient_ZUUL/192.168.10.206:zuul:8113 - registration status: 204 | [com.netflix.discovery.DiscoveryClient:853]
-2019-10-11 09:29:28.183| RMI TCP Connection(6)-127.0.0.1 | INFO |  -  | Initializing Spring DispatcherServlet 'dispatcherServlet' | [org.apache.juli.logging.DirectJDKLog:173]
-2019-10-11 09:29:28.186| RMI TCP Connection(6)-127.0.0.1 | INFO |  -  | Initializing Servlet 'dispatcherServlet' | [org.springframework.web.servlet.FrameworkServlet:524]
-2019-10-11 09:29:28.259| RMI TCP Connection(6)-127.0.0.1 | INFO |  -  | Completed initialization in 72 ms | [org.springframework.web.servlet.FrameworkServlet:546]
-2019-10-11 09:29:56.275| DiscoveryClient-CacheRefreshExecutor-0 | INFO |  -  | Disable delta property : false | [com.netflix.discovery.DiscoveryClient:976]
-2019-10-11 09:29:56.276| DiscoveryClient-CacheRefreshExecutor-0 | INFO |  -  | Single vip registry refresh property : null | [com.netflix.discovery.DiscoveryClient:977]
-2019-10-11 09:29:56.277| DiscoveryClient-CacheRefreshExecutor-0 | INFO |  -  | Force full registry fetch : false | [com.netflix.discovery.DiscoveryClient:978]
-2019-10-11 09:29:56.277| DiscoveryClient-CacheRefreshExecutor-0 | INFO |  -  | Application is null : false | [com.netflix.discovery.DiscoveryClient:979]
-2019-10-11 09:29:56.277| DiscoveryClient-CacheRefreshExecutor-0 | INFO |  -  | Registered Applications size is zero : true | [com.netflix.discovery.DiscoveryClient:980]
-2019-10-11 09:29:56.278| DiscoveryClient-CacheRefreshExecutor-0 | INFO |  -  | Application version is -1: false | [com.netflix.discovery.DiscoveryClient:982]
-2019-10-11 09:29:56.278| DiscoveryClient-CacheRefreshExecutor-0 | INFO |  -  | Getting all instance registry info from the eureka server | [com.netflix.discovery.DiscoveryClient:1065]
-2019-10-11 09:29:56.378| DiscoveryClient-CacheRefreshExecutor-0 | INFO |  -  | The response status is 200 | [com.netflix.discovery.DiscoveryClient:1074]
-2019-10-11 09:30:00.526| http-nio-8113-exec-2 | INFO |  -  | Flipping property: BASIC.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647 | [com.netflix.config.ChainedDynamicProperty$ChainLink:115]
-2019-10-11 09:30:00.623| http-nio-8113-exec-2 | INFO |  -  | Shutdown hook installed for: NFLoadBalancer-PingTimer-BASIC | [com.netflix.util.concurrent.ShutdownEnabledTimer:58]
-2019-10-11 09:30:00.625| http-nio-8113-exec-2 | INFO |  -  | Client: BASIC instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=BASIC,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null | [com.netflix.loadbalancer.BaseLoadBalancer:197]
-2019-10-11 09:30:00.643| http-nio-8113-exec-2 | INFO |  -  | Using serverListUpdater PollingServerListUpdater | [com.netflix.loadbalancer.DynamicServerListLoadBalancer:222]
-2019-10-11 09:30:00.654| http-nio-8113-exec-2 | INFO |  -  | DynamicServerListLoadBalancer for client BASIC initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=BASIC,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@517a3f18 | [com.netflix.loadbalancer.DynamicServerListLoadBalancer:150]
-2019-10-11 09:30:00.723| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:30:01.379| http-nio-8113-exec-2 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@14a87eb4 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 09:30:35.692| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:30:35.701| http-nio-8113-exec-3 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@125de3b4 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 09:30:52.296| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:30:52.298| http-nio-8113-exec-4 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@42083b1e | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 09:30:55.375| http-nio-8113-exec-5 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:30:55.377| http-nio-8113-exec-5 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@1c87690d | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 09:31:03.962| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:31:03.965| http-nio-8113-exec-6 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@2bcce38f | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 09:31:05.414| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:31:05.416| http-nio-8113-exec-7 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@70b29dbd | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 09:31:06.926| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:31:06.929| http-nio-8113-exec-8 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@7a4fd50e | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 09:31:15.483| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:31:15.485| http-nio-8113-exec-9 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@18de8eae | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 09:31:17.180| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:31:17.183| http-nio-8113-exec-10 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@2c58806a | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 09:31:18.138| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:31:18.142| http-nio-8113-exec-1 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@7d789f4c | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 09:31:19.784| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:31:19.786| http-nio-8113-exec-2 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@35f092b6 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 09:31:20.622| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:31:20.623| http-nio-8113-exec-3 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@72721cfb | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 09:31:21.427| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:31:21.430| http-nio-8113-exec-4 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@2174cbaa | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 09:31:45.340| PollingServerListUpdater-1 | INFO |  -  | Flipping property: BASIC.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647 | [com.netflix.config.ChainedDynamicProperty$ChainLink:115]
-2019-10-11 09:32:05.768| http-nio-8113-exec-5 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:34:25.888| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 09:35:52.451| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:36:12.546| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:37:43.188| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:38:00.538| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:39:21.147| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:39:25.898| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 09:41:56.530| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:42:43.664| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:43:52.931| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:44:25.903| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 09:46:11.763| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:46:27.424| http-nio-8113-exec-5 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:46:50.011| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:48:17.942| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:49:25.908| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 09:49:32.403| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:50:08.710| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:50:48.755| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:51:22.416| http-nio-8113-exec-5 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:51:52.464| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:52:11.799| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 09:54:25.912| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 09:59:25.919| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 10:02:13.426| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 10:04:25.929| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 10:09:25.937| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 10:44:44.651| HikariPool-1 housekeeper | WARN |  -  | HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m54s263ms). | [com.zaxxer.hikari.pool.HikariPool$HouseKeeper:766]
-2019-10-11 10:44:50.202| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 11:29:14.477| HikariPool-1 housekeeper | WARN |  -  | HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=43m59s816ms). | [com.zaxxer.hikari.pool.HikariPool$HouseKeeper:766]
-2019-10-11 11:33:19.994| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 11:38:20.001| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 11:39:17.015| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:39:47.883| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:39:47.888| http-nio-8113-exec-4 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@26699ad7 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 11:39:50.666| http-nio-8113-exec-5 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:39:50.669| http-nio-8113-exec-5 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@30824087 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 11:39:56.464| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:39:56.467| http-nio-8113-exec-7 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@7b703dba | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 11:39:58.552| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:39:58.555| http-nio-8113-exec-6 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@2a2b6b | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 11:40:08.098| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:40:08.102| http-nio-8113-exec-8 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@5f62ab6c | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 11:40:09.951| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:40:40.362| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:43:20.007| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 11:48:20.009| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 11:51:41.155| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:52:42.929| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:53:20.015| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 11:54:03.330| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:55:27.767| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:55:59.087| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:55:59.089| http-nio-8113-exec-1 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@18ee7fe9 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 11:56:01.320| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:56:01.322| http-nio-8113-exec-2 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@19649049 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 11:56:19.845| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:57:06.959| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 11:58:20.020| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 12:01:16.606| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 13:32:14.003| HikariPool-1 housekeeper | WARN |  -  | HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h30m29s309ms). | [com.zaxxer.hikari.pool.HikariPool$HouseKeeper:766]
-2019-10-11 13:32:39.115| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 13:33:19.330| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 13:38:19.338| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 13:38:54.748| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 13:39:08.748| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 13:40:36.589| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 13:41:02.422| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 13:43:19.347| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 13:48:19.352| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 13:53:19.364| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 13:58:19.373| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 14:03:19.380| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 14:08:19.386| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 14:11:47.720| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:11:47.737| http-nio-8113-exec-1 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@2b5a591e | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 14:12:21.875| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:13:19.398| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 14:13:43.077| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:14:23.371| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:15:43.098| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:16:06.356| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:18:19.404| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 14:19:35.270| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:19:35.282| http-nio-8113-exec-1 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@7978aabc | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 14:19:37.348| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:19:37.352| http-nio-8113-exec-2 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@6ea3233c | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 14:20:06.396| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:23:19.406| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 14:25:11.702| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:25:11.708| http-nio-8113-exec-6 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@1080ae1b | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 14:25:24.218| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:25:24.221| http-nio-8113-exec-7 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@372316f1 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 14:25:33.983| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:25:33.987| http-nio-8113-exec-8 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@15c85cf5 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 14:25:35.923| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:25:35.926| http-nio-8113-exec-9 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@9866325 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 14:26:06.802| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:26:06.809| http-nio-8113-exec-10 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@9417c3e | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 14:26:08.389| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:26:08.391| http-nio-8113-exec-1 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@6873b372 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 14:26:09.267| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:26:09.269| http-nio-8113-exec-2 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@73b62ba2 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 14:26:20.833| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:27:43.581| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:28:19.414| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 14:28:27.258| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:33:19.421| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 14:38:19.430| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 14:42:23.914| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:42:46.768| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:43:13.607| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:43:19.436| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 14:44:55.586| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:46:40.311| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:47:05.465| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:47:48.949| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:48:15.144| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:48:19.441| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 14:48:43.084| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:48:49.698| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:53:19.447| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 14:54:11.567| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:55:08.394| http-nio-8113-exec-5 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:55:29.500| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:55:54.001| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:55:54.008| http-nio-8113-exec-7 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@73e1bdf1 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 14:56:04.429| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:56:04.432| http-nio-8113-exec-8 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@223128a5 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 14:56:06.384| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:56:06.390| http-nio-8113-exec-10 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@58c40cd4 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 14:56:21.000| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:56:40.591| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:56:52.884| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:57:17.113| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 14:58:19.453| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 14:58:29.929| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:03:19.460| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 15:08:19.465| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 15:08:44.182| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:08:58.168| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:09:36.928| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:09:51.126| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:13:19.476| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 15:18:19.480| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 15:23:19.487| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 15:26:18.234| http-nio-8113-exec-5 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:26:41.637| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:26:41.640| http-nio-8113-exec-6 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@4fb1f53d | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 15:26:44.177| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:26:44.179| http-nio-8113-exec-7 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@76705e68 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 15:27:02.016| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:27:02.021| http-nio-8113-exec-8 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@5936037b | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 15:27:11.870| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:27:35.212| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:28:19.494| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 15:28:46.315| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:32:31.496| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:33:19.502| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 15:38:19.509| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 15:42:05.597| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:42:49.186| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:42:49.190| http-nio-8113-exec-9 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@74ca7d62 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 15:42:59.653| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:42:59.657| http-nio-8113-exec-1 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@4c310e30 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 15:43:01.998| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:43:02.001| http-nio-8113-exec-2 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@4b5ad18f | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 15:43:10.117| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:43:10.128| http-nio-8113-exec-3 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@40c76c43 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 15:43:19.516| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 15:43:19.946| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:44:26.914| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:44:35.087| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:44:47.627| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:46:17.432| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:46:23.979| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:47:09.020| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:48:19.525| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 15:48:28.578| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:48:34.892| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:49:01.110| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:49:49.541| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:50:29.924| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:53:19.532| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 15:53:31.921| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 15:58:19.539| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 15:58:37.958| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:03:19.552| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 16:06:23.719| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:06:23.756| http-nio-8113-exec-9 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@3ed195b0 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 16:06:35.274| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:06:35.281| http-nio-8113-exec-1 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@1fd14b43 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 16:06:37.258| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:06:37.266| http-nio-8113-exec-2 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@c899c31 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 16:06:45.523| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:06:45.528| http-nio-8113-exec-3 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@3f4c22a4 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 16:06:47.169| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:06:47.175| http-nio-8113-exec-4 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@d037e10 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 16:06:55.185| http-nio-8113-exec-5 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:06:55.189| http-nio-8113-exec-5 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@6bca904f | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 16:06:56.853| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:06:56.856| http-nio-8113-exec-6 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@377dfd1c | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 16:07:27.175| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:08:19.559| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 16:11:31.749| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:13:11.123| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:13:19.568| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 16:13:28.702| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:14:42.739| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:14:55.004| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:15:50.952| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:18:19.575| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 16:19:30.472| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:23:19.584| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 16:24:19.859| http-nio-8113-exec-5 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:24:35.399| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:25:15.163| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:25:20.742| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:25:30.233| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:28:19.592| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 16:29:34.712| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:29:44.827| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:33:19.606| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 16:34:32.999| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:38:18.831| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:38:19.612| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 16:38:44.707| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:38:44.713| http-nio-8113-exec-9 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@4aa1ddfd | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 16:38:54.484| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:38:54.487| http-nio-8113-exec-2 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@35c4aa72 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 16:38:56.515| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:38:56.516| http-nio-8113-exec-1 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@264e4e7f | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 16:39:36.727| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:51:53.958| HikariPool-1 housekeeper | WARN |  -  | HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m8s599ms). | [com.zaxxer.hikari.pool.HikariPool$HouseKeeper:766]
-2019-10-11 16:51:58.208| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 16:56:58.214| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 16:59:31.665| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:59:31.696| http-nio-8113-exec-6 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@132e9a6c | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 16:59:33.933| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:59:33.937| http-nio-8113-exec-7 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@4a847212 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 16:59:43.851| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 16:59:43.854| http-nio-8113-exec-8 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@e64d829 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 17:00:10.554| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 17:01:44.600| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 17:01:46.806| http-nio-8113-exec-3 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 17:01:58.220| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 17:02:04.957| http-nio-8113-exec-4 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 17:02:04.963| http-nio-8113-exec-4 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@4f7e4fcc | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 17:02:06.965| http-nio-8113-exec-5 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 17:02:06.967| http-nio-8113-exec-5 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@2d792ff4 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 17:02:19.714| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 17:02:19.716| http-nio-8113-exec-6 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@7e273d1f | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 17:02:52.618| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 17:02:52.620| http-nio-8113-exec-7 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@7e0968c8 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 17:02:54.196| http-nio-8113-exec-8 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 17:02:54.200| http-nio-8113-exec-8 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@788e2aa3 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 17:02:55.707| http-nio-8113-exec-10 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 17:02:55.709| http-nio-8113-exec-10 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@6275fdf4 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 17:03:16.255| http-nio-8113-exec-9 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 17:03:16.257| http-nio-8113-exec-9 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@68245308 | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 17:03:46.239| http-nio-8113-exec-2 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 17:04:44.955| http-nio-8113-exec-1 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 17:06:58.225| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
-2019-10-11 17:08:19.211| http-nio-8113-exec-5 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 17:08:49.519| http-nio-8113-exec-6 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
-2019-10-11 17:08:49.522| http-nio-8113-exec-6 | WARN |  -  | route:BASIC,exceptionType:com.netflix.client.ClientException,stackTrace:[Ljava.lang.StackTraceElement;@3d0dc3bd | [com.cloud.zuul.hystrix.ApiFallbackProvider:27]
-2019-10-11 17:08:51.646| http-nio-8113-exec-7 | WARN |  -  | The Hystrix timeout of 600000ms for the command BASIC is set lower than the combination of the Ribbon read and connect timeout, 4800000ms. | [org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand:132]
+2019-12-31 09:54:05.017| main | INFO |  -  | Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$367c0303] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) | [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330]
+2019-12-31 09:54:05.218| main | INFO |  -  | Setting initial instance status as: STARTING | [org.springframework.cloud.netflix.eureka.InstanceInfoFactory:72]
+2019-12-31 09:54:05.370| main | INFO |  -  | Initializing Eureka in region us-east-1 | [com.netflix.discovery.DiscoveryClient:365]
+2019-12-31 09:54:05.728| main | INFO |  -  | Using JSON encoding codec LegacyJacksonJson | [com.netflix.discovery.provider.DiscoveryJerseyProvider:70]
+2019-12-31 09:54:05.730| main | INFO |  -  | Using JSON decoding codec LegacyJacksonJson | [com.netflix.discovery.provider.DiscoveryJerseyProvider:71]
+2019-12-31 09:54:05.986| main | INFO |  -  | Using XML encoding codec XStreamXml | [com.netflix.discovery.provider.DiscoveryJerseyProvider:80]
+2019-12-31 09:54:05.987| main | INFO |  -  | Using XML decoding codec XStreamXml | [com.netflix.discovery.provider.DiscoveryJerseyProvider:81]
+2019-12-31 09:54:06.401| main | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 09:54:06.429| main | INFO |  -  | Disable delta property : false | [com.netflix.discovery.DiscoveryClient:976]
+2019-12-31 09:54:06.430| main | INFO |  -  | Single vip registry refresh property : null | [com.netflix.discovery.DiscoveryClient:977]
+2019-12-31 09:54:06.430| main | INFO |  -  | Force full registry fetch : false | [com.netflix.discovery.DiscoveryClient:978]
+2019-12-31 09:54:06.430| main | INFO |  -  | Application is null : false | [com.netflix.discovery.DiscoveryClient:979]
+2019-12-31 09:54:06.431| main | INFO |  -  | Registered Applications size is zero : true | [com.netflix.discovery.DiscoveryClient:980]
+2019-12-31 09:54:06.431| main | INFO |  -  | Application version is -1: true | [com.netflix.discovery.DiscoveryClient:982]
+2019-12-31 09:54:06.431| main | INFO |  -  | Getting all instance registry info from the eureka server | [com.netflix.discovery.DiscoveryClient:1065]
+2019-12-31 09:54:06.896| main | INFO |  -  | The response status is 200 | [com.netflix.discovery.DiscoveryClient:1074]
+2019-12-31 09:54:06.901| main | INFO |  -  | Not registering with Eureka server per configuration | [com.netflix.discovery.DiscoveryClient:1335]
+2019-12-31 09:54:06.910| main | INFO |  -  | Discovery Client initialized at timestamp 1577757246908 with initial instances count: 1 | [com.netflix.discovery.DiscoveryClient:465]
+2019-12-31 09:54:06.973| main | INFO |  -  | Registering application CLOUD-ZUUL with eureka with status UP | [org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:41]
+2019-12-31 09:54:07.079| main | INFO |  -  | Fetching config from server at : http://192.168.10.93:1112/ | [org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:207]
+2019-12-31 09:54:08.944| main | INFO |  -  | Located environment: name=cloud-zuul, profiles=[dev], label=dev, version=62297162f7cee2024cdd06a6b831e375585c0287, state=null | [org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:151]
+2019-12-31 09:54:08.945| main | INFO |  -  | Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/wglg550/mycloud.git/cloud-config/cloud-config-module/cloud-zuul/cloud-zuul-dev.yml'}]} | [org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:101]
+2019-12-31 09:54:09.021| main | INFO |  -  | The following profiles are active: dev | [org.springframework.boot.SpringApplication:652]
+2019-12-31 09:54:10.452| main | INFO |  -  | Multiple Spring Data modules found, entering strict repository configuration mode! | [org.springframework.data.repository.config.RepositoryConfigurationDelegate:244]
+2019-12-31 09:54:10.456| main | INFO |  -  | Bootstrapping Spring Data repositories in DEFAULT mode. | [org.springframework.data.repository.config.RepositoryConfigurationDelegate:126]
+2019-12-31 09:54:10.498| main | INFO |  -  | Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces. | [org.springframework.data.repository.config.RepositoryConfigurationDelegate:182]
+2019-12-31 09:54:10.635| main | WARN |  -  | Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format. | [org.springframework.boot.actuate.endpoint.EndpointId:131]
+2019-12-31 09:54:10.751| main | WARN |  -  | Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format. | [org.springframework.boot.actuate.endpoint.EndpointId:131]
+2019-12-31 09:54:11.316| main | INFO |  -  | BeanFactory id=a860681a-1828-3663-97c8-c45981c13f3a | [org.springframework.cloud.context.scope.GenericScope:295]
+2019-12-31 09:54:11.775| main | INFO |  -  | Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$367c0303] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) | [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330]
+2019-12-31 09:54:11.789| main | INFO |  -  | Bean 'org.springframework.cloud.sleuth.instrument.web.client.TraceWebClientAutoConfiguration$TraceOAuthConfiguration' of type [org.springframework.cloud.sleuth.instrument.web.client.TraceWebClientAutoConfiguration$TraceOAuthConfiguration$$EnhancerBySpringCGLIB$$5f5e9265] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) | [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330]
+2019-12-31 09:54:12.335| main | INFO |  -  | Tomcat initialized with port(s): 2111 (http) | [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90]
+2019-12-31 09:54:12.359| main | INFO |  -  | Initializing ProtocolHandler ["http-nio-2111"] | [org.apache.juli.logging.DirectJDKLog:173]
+2019-12-31 09:54:12.372| main | INFO |  -  | Starting service [Tomcat] | [org.apache.juli.logging.DirectJDKLog:173]
+2019-12-31 09:54:12.373| main | INFO |  -  | Starting Servlet engine: [Apache Tomcat/9.0.24] | [org.apache.juli.logging.DirectJDKLog:173]
+2019-12-31 09:54:12.588| main | INFO |  -  | Initializing Spring embedded WebApplicationContext | [org.apache.juli.logging.DirectJDKLog:173]
+2019-12-31 09:54:12.588| main | INFO |  -  | Root WebApplicationContext: initialization completed in 3540 ms | [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:284]
+2019-12-31 09:54:12.608| main | WARN |  -  | No URLs will be polled as dynamic configuration sources. | [com.netflix.config.sources.URLConfigurationSource:121]
+2019-12-31 09:54:12.609| main | INFO |  -  | To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath. | [com.netflix.config.sources.URLConfigurationSource:122]
+2019-12-31 09:54:12.618| main | INFO |  -  | DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@8c18bde | [com.netflix.config.DynamicPropertyFactory:281]
+2019-12-31 09:54:16.544| main | WARN |  -  | No URLs will be polled as dynamic configuration sources. | [com.netflix.config.sources.URLConfigurationSource:121]
+2019-12-31 09:54:16.544| main | INFO |  -  | To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath. | [com.netflix.config.sources.URLConfigurationSource:122]
+2019-12-31 09:54:18.595| main | INFO |  -  | Initializing ExecutorService 'applicationTaskExecutor' | [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:171]
+2019-12-31 09:54:21.129| main | INFO |  -  | 
+
+Using generated security password: 8a326a88-2620-4804-822f-6b17400275a5
+ | [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:83]
+2019-12-31 09:54:21.954| main | INFO |  -  | Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79392584, org.springframework.security.web.context.SecurityContextPersistenceFilter@104e6540, org.springframework.security.web.header.HeaderWriterFilter@106c3e0a, org.springframework.security.web.authentication.logout.LogoutFilter@339b45f8, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@77350382, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@735dc133, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f36c8b1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cf82c58, org.springframework.security.web.session.SessionManagementFilter@e09c7a2, org.springframework.security.web.access.ExceptionTranslationFilter@7ef34eb3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@14f03f2] | [org.springframework.security.web.DefaultSecurityFilterChain:43]
+2019-12-31 09:54:22.890| main | INFO |  -  | Shutting down DiscoveryClient ... | [com.netflix.discovery.DiscoveryClient:906]
+2019-12-31 09:54:22.901| main | INFO |  -  | Completed shut down of DiscoveryClient | [com.netflix.discovery.DiscoveryClient:929]
+2019-12-31 09:54:23.081| main | INFO |  -  | Starting filter initializer | [org.springframework.cloud.netflix.zuul.ZuulFilterInitializer:67]
+2019-12-31 09:54:23.269| main | INFO |  -  | Exposing 2 endpoint(s) beneath base path '/actuator' | [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:58]
+2019-12-31 09:54:23.512| main | INFO |  -  | Setting initial instance status as: STARTING | [org.springframework.cloud.netflix.eureka.InstanceInfoFactory:72]
+2019-12-31 09:54:23.537| main | INFO |  -  | Initializing Eureka in region us-east-1 | [com.netflix.discovery.DiscoveryClient:365]
+2019-12-31 09:54:23.554| main | INFO |  -  | Using JSON encoding codec LegacyJacksonJson | [com.netflix.discovery.provider.DiscoveryJerseyProvider:70]
+2019-12-31 09:54:23.559| main | INFO |  -  | Using JSON decoding codec LegacyJacksonJson | [com.netflix.discovery.provider.DiscoveryJerseyProvider:71]
+2019-12-31 09:54:23.559| main | INFO |  -  | Using XML encoding codec XStreamXml | [com.netflix.discovery.provider.DiscoveryJerseyProvider:80]
+2019-12-31 09:54:23.560| main | INFO |  -  | Using XML decoding codec XStreamXml | [com.netflix.discovery.provider.DiscoveryJerseyProvider:81]
+2019-12-31 09:54:23.714| main | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 09:54:23.716| main | INFO |  -  | Disable delta property : false | [com.netflix.discovery.DiscoveryClient:976]
+2019-12-31 09:54:23.716| main | INFO |  -  | Single vip registry refresh property : null | [com.netflix.discovery.DiscoveryClient:977]
+2019-12-31 09:54:23.716| main | INFO |  -  | Force full registry fetch : false | [com.netflix.discovery.DiscoveryClient:978]
+2019-12-31 09:54:23.717| main | INFO |  -  | Application is null : false | [com.netflix.discovery.DiscoveryClient:979]
+2019-12-31 09:54:23.717| main | INFO |  -  | Registered Applications size is zero : true | [com.netflix.discovery.DiscoveryClient:980]
+2019-12-31 09:54:23.717| main | INFO |  -  | Application version is -1: true | [com.netflix.discovery.DiscoveryClient:982]
+2019-12-31 09:54:23.718| main | INFO |  -  | Getting all instance registry info from the eureka server | [com.netflix.discovery.DiscoveryClient:1065]
+2019-12-31 09:54:23.872| main | INFO |  -  | The response status is 200 | [com.netflix.discovery.DiscoveryClient:1074]
+2019-12-31 09:54:23.874| main | INFO |  -  | Starting heartbeat executor: renew interval is: 30 | [com.netflix.discovery.DiscoveryClient:1288]
+2019-12-31 09:54:23.879| main | INFO |  -  | InstanceInfoReplicator onDemand update allowed rate per min is 4 | [com.netflix.discovery.InstanceInfoReplicator:60]
+2019-12-31 09:54:23.884| main | INFO |  -  | Discovery Client initialized at timestamp 1577757263884 with initial instances count: 1 | [com.netflix.discovery.DiscoveryClient:465]
+2019-12-31 09:54:23.897| main | INFO |  -  | Registering application CLOUD-ZUUL with eureka with status UP | [org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:41]
+2019-12-31 09:54:23.900| main | INFO |  -  | Saw local status change event StatusChangeEvent [timestamp=1577757263899, current=UP, previous=STARTING] | [com.netflix.discovery.DiscoveryClient$3:1323]
+2019-12-31 09:54:23.905| DiscoveryClient-InstanceInfoReplicator-0 | INFO |  -  | DiscoveryClient_CLOUD-ZUUL/192.168.10.93:cloud-zuul:2111: registering service... | [com.netflix.discovery.DiscoveryClient:844]
+2019-12-31 09:54:24.037| DiscoveryClient-InstanceInfoReplicator-0 | INFO |  -  | DiscoveryClient_CLOUD-ZUUL/192.168.10.93:cloud-zuul:2111 - registration status: 204 | [com.netflix.discovery.DiscoveryClient:853]
+2019-12-31 09:54:24.054| main | INFO |  -  | Starting ProtocolHandler ["http-nio-2111"] | [org.apache.juli.logging.DirectJDKLog:173]
+2019-12-31 09:54:24.132| main | INFO |  -  | Tomcat started on port(s): 2111 (http) with context path '' | [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:202]
+2019-12-31 09:54:24.134| main | INFO |  -  | Updating port to 2111 | [org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration:145]
+2019-12-31 09:54:24.135| main | INFO |  -  | Updating port to 2111 | [org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration:145]
+2019-12-31 09:54:24.139| main | INFO |  -  | Started CloudZuulApplication in 22.127 seconds (JVM running for 23.942) | [org.springframework.boot.StartupInfoLogger:59]
+2019-12-31 09:54:26.111| RMI TCP Connection(11)-127.0.0.1 | INFO |  -  | Initializing Spring DispatcherServlet 'dispatcherServlet' | [org.apache.juli.logging.DirectJDKLog:173]
+2019-12-31 09:54:26.113| RMI TCP Connection(11)-127.0.0.1 | INFO |  -  | Initializing Servlet 'dispatcherServlet' | [org.springframework.web.servlet.FrameworkServlet:524]
+2019-12-31 09:54:26.159| RMI TCP Connection(11)-127.0.0.1 | INFO |  -  | Completed initialization in 45 ms | [org.springframework.web.servlet.FrameworkServlet:546]
+2019-12-31 09:54:26.176| RMI TCP Connection(9)-127.0.0.1 | INFO |  -  | Fetching config from server at : http://192.168.10.93:1112/ | [org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:207]
+2019-12-31 09:54:27.452| RMI TCP Connection(9)-127.0.0.1 | INFO |  -  | Located environment: name=cloud-zuul, profiles=[dev], label=dev, version=62297162f7cee2024cdd06a6b831e375585c0287, state=null | [org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:151]
+2019-12-31 09:59:23.725| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 10:01:01.980| http-nio-2111-exec-2 | INFO |  -  | 
+
+Proxy opening connection to: http://localhost:2111/hystrix.stream?delay=100
+
+ | [org.springframework.cloud.netflix.hystrix.dashboard.HystrixDashboardConfiguration$ProxyStreamServlet:173]
+2019-12-31 10:01:01.983| http-nio-2111-exec-4 | INFO |  -  | 
+
+Proxy opening connection to: http://localhost:2111/hystrix.stream?delay=100
+
+ | [org.springframework.cloud.netflix.hystrix.dashboard.HystrixDashboardConfiguration$ProxyStreamServlet:173]
+2019-12-31 10:01:02.542| AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@58679ff} | INFO |  -  | Flipping property: localhost.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647 | [com.netflix.config.ChainedDynamicProperty$ChainLink:115]
+2019-12-31 10:01:02.628| AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@58679ff} | INFO |  -  | Shutdown hook installed for: NFLoadBalancer-PingTimer-localhost | [com.netflix.util.concurrent.ShutdownEnabledTimer:58]
+2019-12-31 10:01:02.629| AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@58679ff} | INFO |  -  | Client: localhost instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null | [com.netflix.loadbalancer.BaseLoadBalancer:197]
+2019-12-31 10:01:02.642| AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@58679ff} | INFO |  -  | Using serverListUpdater PollingServerListUpdater | [com.netflix.loadbalancer.DynamicServerListLoadBalancer:222]
+2019-12-31 10:01:02.649| AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@58679ff} | INFO |  -  | DynamicServerListLoadBalancer for client localhost initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@9089371 | [com.netflix.loadbalancer.DynamicServerListLoadBalancer:150]
+2019-12-31 10:04:23.739| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 10:09:23.750| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 10:14:23.759| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 10:19:23.769| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 10:24:23.782| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 10:29:23.797| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 10:34:23.808| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 10:39:23.818| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 10:44:23.828| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 10:49:23.840| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 10:54:23.850| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 10:59:23.861| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 11:04:23.875| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 11:09:23.885| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 11:14:23.899| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 11:19:23.910| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 11:23:07.047| http-nio-2111-exec-6 | INFO |  -  | 
+
+Proxy opening connection to: http://localhost:2111/hystrix.stream?delay=100
+
+ | [org.springframework.cloud.netflix.hystrix.dashboard.HystrixDashboardConfiguration$ProxyStreamServlet:173]
+2019-12-31 11:23:07.048| http-nio-2111-exec-10 | INFO |  -  | 
+
+Proxy opening connection to: http://localhost:2111/hystrix.stream?delay=100
+
+ | [org.springframework.cloud.netflix.hystrix.dashboard.HystrixDashboardConfiguration$ProxyStreamServlet:173]
+2019-12-31 11:24:23.921| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 11:29:23.928| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 11:34:23.944| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 11:39:23.951| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 11:44:23.958| AsyncResolver-bootstrap-executor-0 | INFO |  -  | Resolving eureka endpoints via configuration | [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]
+2019-12-31 11:46:11.281| Thread-62 | INFO |  -  | Shutting down the Executor Pool for PollingServerListUpdater | [com.netflix.loadbalancer.PollingServerListUpdater$LazyHolder$2:53]
+2019-12-31 11:46:11.288| Thread-50 | INFO |  -  | Unregistering application CLOUD-ZUUL with eureka with status DOWN | [org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:65]
+2019-12-31 11:46:11.291| Thread-50 | WARN |  -  | Saw local status change event StatusChangeEvent [timestamp=1577763971291, current=DOWN, previous=UP] | [com.netflix.discovery.DiscoveryClient$3:1321]
+2019-12-31 11:46:11.298| DiscoveryClient-InstanceInfoReplicator-0 | INFO |  -  | DiscoveryClient_CLOUD-ZUUL/192.168.10.93:cloud-zuul:2111: registering service... | [com.netflix.discovery.DiscoveryClient:844]
+2019-12-31 11:46:11.320| DiscoveryClient-InstanceInfoReplicator-0 | INFO |  -  | DiscoveryClient_CLOUD-ZUUL/192.168.10.93:cloud-zuul:2111 - registration status: 204 | [com.netflix.discovery.DiscoveryClient:853]
+2019-12-31 11:46:11.337| Thread-50 | INFO |  -  | Stopping filter initializer | [org.springframework.cloud.netflix.zuul.ZuulFilterInitializer:79]
+2019-12-31 11:46:11.395| Thread-50 | INFO |  -  | Shutting down ExecutorService 'applicationTaskExecutor' | [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:208]
+2019-12-31 11:46:12.465| Thread-50 | INFO |  -  | Shutdown hook removed for: NFLoadBalancer-PingTimer-localhost | [com.netflix.util.concurrent.ShutdownEnabledTimer:67]
+2019-12-31 11:46:12.486| Thread-50 | INFO |  -  | Exception caught (might be ok if at shutdown) | [com.netflix.util.concurrent.ShutdownEnabledTimer:72]
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82)
+	at java.lang.Runtime.removeShutdownHook(Runtime.java:239)
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70)
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632)
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883)
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1036)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1029)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:975)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1036)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1029)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945)
+2019-12-31 11:46:12.609| Thread-50 | INFO |  -  | Shutting down DiscoveryClient ... | [com.netflix.discovery.DiscoveryClient:906]
+2019-12-31 11:46:15.615| Thread-50 | INFO |  -  | Unregistering ... | [com.netflix.discovery.DiscoveryClient:940]
+2019-12-31 11:46:15.638| Thread-50 | ERROR |  -  | Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://root:root@eureka-host:1111/eureka/} | [com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient:91]
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.delete(WebResource.java:591)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.cancel(AbstractJerseyEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:941)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:919)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:156)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:403)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:142)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1036)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1029)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 41 common frames omitted
+2019-12-31 11:46:15.642| Thread-50 | WARN |  -  | Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused) | [com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient:130]
+2019-12-31 11:46:15.644| Thread-50 | ERROR |  -  | Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://root:root@eureka-host:1111/eureka/} | [com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient:83]
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.delete(WebResource.java:591)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.cancel(AbstractJerseyEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:941)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:919)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:156)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:403)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:142)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1036)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1029)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 42 common frames omitted
+2019-12-31 11:46:15.645| Thread-50 | WARN |  -  | Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused) | [com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient:130]
+2019-12-31 11:46:15.650| Thread-50 | ERROR |  -  | DiscoveryClient_CLOUD-ZUUL/192.168.10.93:cloud-zuul:2111 - de-registration failedCannot execute request on any known server | [com.netflix.discovery.DiscoveryClient:944]
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:941)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:919)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:156)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:403)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:142)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1036)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1029)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945)
+2019-12-31 11:46:15.678| Thread-50 | INFO |  -  | Completed shut down of DiscoveryClient | [com.netflix.discovery.DiscoveryClient:929]

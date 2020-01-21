@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/cloud-config/cloud-config.iml" filepath="$PROJECT_DIR$/cloud-config/cloud-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-eureka/cloud-eureka.iml" filepath="$PROJECT_DIR$/cloud-eureka/cloud-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-parent/cloud-parent.iml" filepath="$PROJECT_DIR$/cloud-parent/cloud-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-zipkin/cloud-zipkin.iml" filepath="$PROJECT_DIR$/cloud-zipkin/cloud-zipkin.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-zuul/cloud-zuul.iml" filepath="$PROJECT_DIR$/cloud-zuul/cloud-zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/wl-cloud.iml" filepath="$PROJECT_DIR$/wl-cloud.iml" />
     </modules>
