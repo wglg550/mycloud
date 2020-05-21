@@ -85,6 +85,48 @@
                 </execution>
             </executions>
         </plugin>
+
+        <!--以下为jar瘦身的plugs,不能和spring-boot-maven-plugin同时使用(spring-boot-maven-plugin需注释)-->
+        <!--拷贝依赖到jar外面的lib目录-->
+<!--        <plugin>-->
+<!--            <groupId>org.apache.maven.plugins</groupId>-->
+<!--            <artifactId>maven-dependency-plugin</artifactId>-->
+<!--            <executions>-->
+<!--                <execution>-->
+<!--                    <id>copy-dependencies</id>-->
+<!--                    <phase>package</phase>-->
+<!--                    <goals>-->
+<!--                        <goal>copy-dependencies</goal>-->
+<!--                    </goals>-->
+<!--                    <configuration>                &lt;!&ndash;指定的依赖路径&ndash;&gt;-->
+<!--                        <outputDirectory>-->
+<!--                            ${project.build.directory}/lib-->
+<!--                        </outputDirectory>-->
+<!--                    </configuration>-->
+<!--                </execution>-->
+<!--            </executions>-->
+<!--        </plugin>-->
+
+<!--        <plugin>-->
+<!--            <groupId>org.apache.maven.plugins</groupId>-->
+<!--            <artifactId>maven-jar-plugin</artifactId>-->
+<!--            <configuration>-->
+<!--                <archive>-->
+<!--                    <manifest>-->
+<!--                        &lt;!&ndash;addClasspath表示需要加入到类构建路径&ndash;&gt;-->
+<!--                        <addClasspath>true</addClasspath>-->
+<!--                        &lt;!&ndash;classpathPrefix指定生成的Manifest文件中Class-Path依赖lib前面都加上路径,构建出lib/xx.jar&ndash;&gt;-->
+<!--                        <classpathPrefix>lib/</classpathPrefix>-->
+<!--                        <mainClass>com.qmth.teachcloud.print.TeachcloudPrintApplication</mainClass>-->
+<!--                    </manifest>-->
+<!--                    <manifestEntries>-->
+<!--                        &lt;!&ndash; 在Class-Path下添加配置文件的路径 &ndash;&gt;-->
+<!--                        <Class-Path>lib/aspose-words-jdk16-15.8.0.jar</Class-Path>-->
+<!--                        &lt;!&ndash;这里表示jar路径加入到MANIFEST.MF&ndash;&gt;-->
+<!--                    </manifestEntries>-->
+<!--                </archive>-->
+<!--            </configuration>-->
+<!--        </plugin>-->
     </plugins>
 </build>
 </project>
