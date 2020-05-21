@@ -46,8 +46,8 @@
 					</archive>
 					<excludes>
 						<exclude>*.properties</exclude>
-						<exclude>*.xml </exclude>
-						<exclude>*.conf </exclude>
+						<exclude>*.xml</exclude>
+						<exclude>*.conf</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
