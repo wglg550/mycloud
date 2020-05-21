@@ -86,7 +86,7 @@
             </executions>
         </plugin>
 
-        <!--以下为jar瘦身的plugs,不能和spring-boot-maven-plugin同时使用(spring-boot-maven-plugin需注释)-->
+        <!--以下为jar瘦身的plugin,不能和spring-boot-maven-plugin同时使用(spring-boot-maven-plugin需注释)-->
         <!--拷贝依赖到jar外面的lib目录-->
 <!--        <plugin>-->
 <!--            <groupId>org.apache.maven.plugins</groupId>-->
